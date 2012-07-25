@@ -149,9 +149,9 @@ mpd_music_dir = "~/Music"
 ## text attributes listed above.
 ##
 #
-#now_playing_prefix = "$b"
+now_playing_prefix = "$b$5»»»»   $9"
 #
-#now_playing_suffix = "$/b"
+now_playing_suffix = "$/b"
 #
 #browser_playlist_prefix = "$2playlist$9 "
 #
@@ -215,7 +215,7 @@ browser_display_mode = "columns" #(classic/columns)
 #
 autocenter_mode = "yes"
 #
-progressbar_look = "##"
+progressbar_look = "─╼·"
 #
 #default_place_to_search_in = "database" (database/playlist)
 #

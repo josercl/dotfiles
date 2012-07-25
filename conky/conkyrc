@@ -1,0 +1,61 @@
+# -- Conky settings -- #
+
+use_xft yes
+xftfont DejaVu Sans:size=8
+xftalpha 0.8
+
+update_interval 1
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+#no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+use_spacer none
+
+own_window yes
+own_window_type override 
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 180 450
+#maximum_size 200 800
+alignment tr
+if_up_strictness address
+
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+gap_y 30
+gap_x 5
+
+
+# -- Lua load -- #
+lua_load ~/.conky/piechart.lua
+lua_draw_hook_post main_pie
+
+#at least one line (empty or not) after TEXT
+TEXT
+${font Inconsolata:size=9}${color FFFFFF}
+${voffset 10}${offset 55}${cpu cpu1} %${font}
+${offset 105}${font Inconsolata:size=19}CPU${font}
+${offset 55}${font Inconsolata:size=9}${cpu cpu2} %${font}
+${voffset 50}${offset 38}${font Inconsolata:size=13}RAM${offset 54}SWAP${font}
+${offset 40}${font Inconsolata:size=9}${memperc} %${offset 64}${swapperc} %${font}
+${voffset 35}${alignc}${font Inconsolata:size=9}${if_up eth0}IP: ${addr eth0}${endif}
+${alignc}${if_up eth1}IP (wlan): ${addr eth1}${endif}${font}
+${voffset 35}${offset 29}${font Inconsolata:size=13}HOME${font}
+${offset 40}${font Inconsolata:size=9}${fs_used_perc /home} %${offset 50}${font Inconsolata:size=13} /${font}${font}
+${offset 123}${font Inconsolata:size=9}${fs_used_perc /} %${font}

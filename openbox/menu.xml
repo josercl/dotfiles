@@ -174,6 +174,9 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
 			<action name="Execute">
 				<execute>skype</execute>
+                <startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/transmission.png" label="Transmission">

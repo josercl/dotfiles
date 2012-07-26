@@ -27,39 +27,39 @@ URxvt.matcher.button:  1
 urxvt*cursorColor:      #fd971f
 
 ! terminal colours
-*foreground:#a0a0a0
-*background:#1b1d1e
+URxvt*foreground:#a0a0a0
+URxvt*background:#1b1d1e
 
 !black
-*color0:    #1b1d1e
-*color8:    #505354
+URxvt*color0:    #1b1d1e
+URxvt*color8:    #505354
 !red
-*color1:    #f92672
-*color9:    #ff5995
+URxvt*color1:    #f92672
+URxvt*color9:    #ff5995
 !green
 !*color2:    #82b414
 !*color10:   #b6e354
-*color2:     #A6E22E
-*color10:    #B6E354
+URxvt*color2:     #A6E22E
+URxvt*color10:    #B6E354
 !yellow
-*color3:    #fd971f
-*color11:   #feed6c
+URxvt*color3:    #fd971f
+URxvt*color11:   #feed6c
 !blue
 !*color4:    #56c2d6
 !*color12:   #8cedff
 !*color4:    #3465a4
 !*color12:   #729fcf
-*color4:     #6495ED
-*color12:    #87CEEB
+URxvt*color4:     #6495ED
+URxvt*color12:    #87CEEB
 !magenta
-*color5:    #8c54fe
-*color13:   #9e6ffe
+URxvt*color5:    #8c54fe
+URxvt*color13:   #9e6ffe
 !cyan
-*color6:    #56676b
-*color14:   #899ca1
+URxvt*color6:    #56676b
+URxvt*color14:   #899ca1
 !white
-*color7:    #aaaaaa
-*color15:   #ffffff
+URxvt*color7:    #aaaaaa
+URxvt*color15:   #ffffff
 
 ! alsamixer scheme
 alsamixer*color1:   #ff2759

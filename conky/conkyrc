@@ -48,14 +48,14 @@ lua_draw_hook_post main_pie
 
 #at least one line (empty or not) after TEXT
 TEXT
-${font Inconsolata:size=9}${color FFFFFF}
-${voffset 10}${offset 55}${cpu cpu1} %${font}
-${offset 105}${font Inconsolata:size=19}CPU${font}
-${offset 55}${font Inconsolata:size=9}${cpu cpu2} %${font}
-${voffset 50}${offset 38}${font Inconsolata:size=13}RAM${offset 54}SWAP${font}
-${offset 40}${font Inconsolata:size=9}${memperc} %${offset 64}${swapperc} %${font}
-${voffset 35}${alignc}${font Inconsolata:size=9}${if_up eth0}IP: ${addr eth0}${endif}
+${font Terminus:size=9}${color FFFFFF}
+${voffset 10}${offset 50}${cpu cpu1} %${font}
+${offset 105}${font Terminus:size=19}CPU${font}
+${offset 50}${font Terminus:size=9}${cpu cpu2} %${font}
+${voffset 55}${offset 38}${font Terminus:size=13}RAM${offset 50}SWAP${font}
+${offset 40}${font Terminus:size=9}${memperc} %${offset 64}${swapperc} %${font}
+${voffset 42}${alignc}${font Terminus:size=9}${if_up eth0}IP: ${addr eth0}${endif}
 ${alignc}${if_up eth1}IP (wlan): ${addr eth1}${endif}${font}
-${voffset 35}${offset 29}${font Inconsolata:size=13}HOME${font}
-${offset 40}${font Inconsolata:size=9}${fs_used_perc /home} %${offset 50}${font Inconsolata:size=13} /${font}${font}
-${offset 123}${font Inconsolata:size=9}${fs_used_perc /} %${font}
+${voffset 35}${offset 29}${font Terminus:size=13}HOME${font}
+${offset 40}${font Terminus:size=9}${fs_used_perc /home} %${offset 50}${font Terminus:size=13} /${font}${font}
+${offset 123}${font Terminus:size=9}${fs_used_perc /} %${font}

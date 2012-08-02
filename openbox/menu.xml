@@ -199,6 +199,11 @@
 				<execute>wicd-gtk</execute>
 			</action>
 		</item>
+        <item icon="/usr/share/icons/Faenza/apps/24/wireshark.png" label="Wireshark">
+			<action name="Execute">
+				<execute>wireshark</execute>
+			</action>
+		</item>
 	</menu>
 	<menu id="apps-multimedia-menu" label="Multimedia">
 		<item label="MPD">

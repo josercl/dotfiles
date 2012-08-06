@@ -1,0 +1,10 @@
+*.class
+*~
+.project
+.classpath
+.*ignore
+.buildpath
+.settings
+Thumbs.db
+.mymetadata
+*.komodoproject

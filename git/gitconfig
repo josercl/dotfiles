@@ -1,0 +1,7 @@
+[user]
+	name = José Rafael Carrero León
+	email = josercl@gmail.com
+[core]
+	editor = vi
+[color]
+	ui = true

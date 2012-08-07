@@ -188,7 +188,7 @@ now_playing_suffix = "$/b"
 ## E.g. {lr} will give you right aligned column of lengths.
 ##
 #
-#song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t} (30)[red]{b}"
+song_columns_list_format = "(7f)[green]{l} (25)[white]{a} (40)[]{t} (30)[red]{b}"
 #
 ##### various settings #####
 #

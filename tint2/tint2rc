@@ -91,6 +91,7 @@ time1_font = Terminus 9
 clock_font_color = #FFFFFF 100
 clock_padding = 5 0
 clock_background_id = 1
+clock_lclick_command = gsimplecal &
 
 # Tooltips
 tooltip = 1

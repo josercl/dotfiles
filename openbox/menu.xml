@@ -137,6 +137,11 @@
 		</item>
 	</menu>
 	<menu id="apps-net-menu" label="Internet">
+        <item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
+		    <action name="Execute">
+			    <execute>chromium</execute>
+		    </action>
+		</item>
         <item icon="/usr/share/icons/Faenza/apps/24/ekiga.png" label="Ekiga">
 			<action name="Execute">
 				<execute>ekiga</execute>
@@ -154,11 +159,6 @@
 					<enabled>yes</enabled>
 					<wmclass>Firefox</wmclass>
 				</startupnotify>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/google-chrome.png" label="Google Chrome">
-			<action name="Execute">
-				<execute>google-chrome</execute>
 			</action>
 		</item>
         <item icon="" label="Linphone">
@@ -367,10 +367,10 @@
 				<execute>thunar</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/google-chrome.png" label="Google Chrome">
-			<action name="Execute">
-				<execute>google-chrome</execute>
-			</action>
+		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
+		    <action name="Execute">
+			    <execute>chromium</execute>
+		    </action>
 		</item>
 		<separator label="Applications"/>
 		<menu id="apps-accessories-menu" icon="/usr/share/icons/Faenza/categories/24/applications-accessories.png"/>

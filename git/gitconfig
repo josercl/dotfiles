@@ -10,4 +10,7 @@
 	added = green bold
 	changed = yellow bold
 	untracked = red
-	
+[alias]
+	st = status
+	co = checkout
+	ci = commit

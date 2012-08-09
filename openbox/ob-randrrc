@@ -1,0 +1,4 @@
+[ Monitor Externo ]
+
+A la Izquierda: --output VGA1 --preferred --left-of LVDS1
+A la Derecha: --output VGA1 --preferred --right-of LVDS1

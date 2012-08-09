@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/doc/openbox/menu.xsd">
+
+    <menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
+
 	<menu id="apps-dev-menu" label="Development">
 		<item icon="/usr/share/icons/Faenza/apps/24/eclipse.png" label="Eclipse">
 			<action name="Execute">
@@ -274,7 +277,7 @@
 		</item>
 	</menu>
 	<menu id="system-menu" label="System">
-		<item label="Openbox Configuration Manager">
+        <item label="Openbox Configuration Manager">
 			<action name="Execute">
 				<command>obconf</command>
 			</action>
@@ -307,6 +310,7 @@
 		</item>
 	</menu>
     <menu id="pref-menu" label="Preferences">
+        <menu id="randr-menu" />
         <item label="Desktop Wallpaper">
             <action name="Execute">
                 <command>nitrogen ~/Pictures --no-recurse</command>
@@ -355,6 +359,8 @@
 			</action>
 		</item>
 	</menu>
+    
+
 	<menu id="root-menu" label="Openbox 3">
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
@@ -373,6 +379,7 @@
 		    </action>
 		</item>
 		<separator label="Applications"/>
+        
 		<menu id="apps-accessories-menu" icon="/usr/share/icons/Faenza/categories/24/applications-accessories.png"/>
 		<menu id="apps-dev-menu" icon="/usr/share/icons/Faenza/categories/24/applications-development.png"/>
 		<menu id="apps-games-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-games.png"/>

@@ -5,27 +5,21 @@
 # Background definitions
 # ID 1
 rounded = 5
-border_width = 0
-background_color = #000000 60
-border_color = #FFFFFF 0
+border_width = 1
+background_color = #000000 75
+border_color = #EDA723 100
 
 # ID 2
-rounded = 0
-border_width = 0
-background_color = #FFFFFF 40
-border_color = #FFFFFF 40
+rounded = 5
+border_width = 2
+background_color = #000000 56
+border_color = #000000 56
 
 # ID 3
 rounded = 5
-border_width = 0
-background_color = #FFFFFF 0
-border_color = #FFFFFF 60
-
-# ID 4
-rounded = 0
-border_width = 0
-background_color = #000000 0
-border_color = #FFFFFF 0
+border_width = 2
+background_color = #EDA723 56
+border_color = #181818 100
 
 # Panel
 panel_monitor = all
@@ -36,7 +30,7 @@ panel_padding = 4 0 7
 panel_dock = 0
 wm_menu = 1
 panel_layer = bottom
-panel_background_id = 4
+panel_background_id = 0
 
 # Panel Autohide
 autohide = 0
@@ -60,7 +54,7 @@ task_maximum_size = 1280 35
 task_padding = 6 5
 task_background_id = 0
 task_active_background_id = 1
-task_urgent_background_id = 2
+task_urgent_background_id = 3
 task_iconified_background_id = 0
 
 # Task Icons
@@ -73,7 +67,7 @@ task_iconified_icon_asb = 70 0 0
 task_font = Terminus 9
 task_font_color = #FFFFFF 60
 task_active_font_color = #FFFFFF 100
-task_urgent_font_color = #FFFFFF 80
+task_urgent_font_color = #181818 100
 task_iconified_font_color = #FFFFFF 60
 font_shadow = 0
 
@@ -81,7 +75,7 @@ font_shadow = 0
 systray = 1
 systray_padding = 5 0 5
 systray_sort = ascending
-systray_background_id = 1
+systray_background_id = 2
 systray_icon_size = 16
 systray_icon_asb = 100 0 0
 
@@ -90,7 +84,7 @@ time1_format = %a, %d %B %H:%M
 time1_font = Terminus 9
 clock_font_color = #FFFFFF 100
 clock_padding = 5 0
-clock_background_id = 1
+clock_background_id = 2
 clock_lclick_command = gsimplecal &
 
 # Tooltips
@@ -98,8 +92,8 @@ tooltip = 1
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
-tooltip_background_id = 1
-tooltip_font = Terminus 10
+tooltip_background_id = 2
+tooltip_font = Terminus 9
 tooltip_font_color = #FFFFFF 100
 
 # Mouse
@@ -117,6 +111,6 @@ bat1_font = Terminus 8
 bat2_font = Terminus 6
 battery_font_color = #FFFFFF 100
 battery_padding = 5 0
-battery_background_id = 1
+battery_background_id = 2
 
 # End of config

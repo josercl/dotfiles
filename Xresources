@@ -1,7 +1,7 @@
 URxvt.font:            xft:terminus:size=12:antialias=false
 URxvt.perl-ext-common: default,tabbedex,matcher,vtwheel,clipboard
 URxvt.tabbed.title:    false
-URxvt.urlLauncher:     google-chrome
+URxvt.urlLauncher:     chromium
 URxvt.matcher.button:  1
 
 ! ----------------------------------------------------------------------

@@ -337,25 +337,25 @@
 		<item label="Shutdown">
 			<action name="Execute">
 				<prompt>Shutdown</prompt>
-				<command>dbus-send --system --print-reply --dest=&quot;org.freedesktop.ConsoleKit&quot; /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop</command>
+                <command>systemctl poweroff</command>
 			</action>
 		</item>
 		<item label="Restart">
 			<action name="Execute">
 				<prompt>Restart</prompt>
-				<command>dbus-send --system --print-reply --dest=&quot;org.freedesktop.ConsoleKit&quot; /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart</command>
+                <command>systemctl reboot</command>
 			</action>
 		</item>
 		<item label="Suspend">
 			<action name="Execute">
 				<prompt>Suspend</prompt>
-				<command>dbus-send --system --print-reply --dest=&quot;org.freedesktop.UPower&quot; /org/freedesktop/UPower org.freedesktop.UPower.Suspend</command>
+                <command>systemctl suspend</command>
 			</action>
 		</item>
 		<item label="Hibernate">
 			<action name="Execute">
 				<prompt>Hibernate</prompt>
-				<command>dbus-send --system --print-reply --dest=&quot;org.freedesktop.UPower&quot; /org/freedesktop/UPower org.freedesktop.UPower.Hibernate</command>
+                <command>systemctl hibernate</command>
 			</action>
 		</item>
 	</menu>

@@ -70,6 +70,7 @@ function conky_main_pie()
     --theses parameters are called many times so I put them into variables
     local font_name,font_size="FreeSans",14
     local col=0XFFFFFF
+    local col2=0XEDA723D
         
     --for the clock
     local temp = os.date("*t")
@@ -97,7 +98,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         },  
 	
@@ -120,7 +121,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         },        
         {--CIRCLE  3 : MEMORY : ram
@@ -140,7 +141,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         },
 
@@ -163,7 +164,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         },                                
          
@@ -184,7 +185,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         },
 	{--CIRCLE  6 : /
@@ -204,7 +205,7 @@ function conky_main_pie()
                 {col,0.2},
                 },
             tablefg={
-                {col,0.6},
+                {col2,1.0},
                 },
         }
 

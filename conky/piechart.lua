@@ -70,7 +70,7 @@ function conky_main_pie()
     --theses parameters are called many times so I put them into variables
     local font_name,font_size="FreeSans",14
     local col=0XFFFFFF
-    local col2=0XEDA723D
+    local col2=0XEDA723
         
     --for the clock
     local temp = os.date("*t")

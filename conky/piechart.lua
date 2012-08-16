@@ -71,6 +71,7 @@ function conky_main_pie()
     local font_name,font_size="FreeSans",14
     local col=0XFFFFFF
     local col2=0XEDA723
+    local col2=0X0099CC
         
     --for the clock
     local temp = os.date("*t")

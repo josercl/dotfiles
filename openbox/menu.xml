@@ -68,9 +68,9 @@
 		</item>
 	</menu>
 	<menu id="apps-fileman-menu" label="File Managers">
-		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="Thunar">
+        <item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="PCmanFM">
 			<action name="Execute">
-				<command>Thunar</command>
+				<command>pcmanfm</command>
 			</action>
 		</item>
 	</menu>
@@ -370,7 +370,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="Files">
 			<action name="Execute">
-				<execute>thunar</execute>
+				<execute>pcmanfm</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">

@@ -14,9 +14,7 @@
 
 # If you want to use XFCE config tools...
 #
-#xfce-mcs-manager &
-xrdb -load ~/.Xresources
-thunar --daemon &
+#xrdb -load ~/.Xresources
 setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 20 && conky &

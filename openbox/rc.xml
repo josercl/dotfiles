@@ -34,7 +34,7 @@
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is, 'Primary' - only on the primary monitor -->
-    <primaryMonitor>Mouse</primaryMonitor>
+    <primaryMonitor>Active</primaryMonitor>
     <!-- The monitor where Openbox should place popup dialogs such as the
        focus cycling popup, or the desktop switch popup.  It can be an index
        from 1, specifying a particular monitor.  Or it can be one of the
@@ -337,12 +337,17 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>xfce4-screenshooter -f -s /home/jose</command>
+        <command>scrot</command>
       </action>
     </keybind>
     <keybind key="A-Print">
       <action name="Execute">
-        <command>xfce4-screenshooter -w -s /home/jose</command>
+        <command>scrot -d 4 -s</command>
+      </action>
+    </keybind>
+    <keybind key="C-Print">
+      <action name="Execute">
+        <command>scrot -e 'gimp $f'</command>
       </action>
     </keybind>
     <!-- Control de volumen con el teclado -->

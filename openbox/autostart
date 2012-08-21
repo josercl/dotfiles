@@ -14,7 +14,7 @@
 
 # If you want to use XFCE config tools...
 #
-#xrdb -load ~/.Xresources
+xrdb -load ~/.Xresources
 setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 20 && conky &

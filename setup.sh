@@ -23,8 +23,17 @@ ln -s $CFG_DIR/vimrc ~/.vimrc -f
 
 #Configuracion de openbox
 ln -s $CFG_DIR/openbox/ob-randrrc ~/.ob-randrrc -f
+
+if [ ! -d ~/.config ];then
+mkdir ~/.config;
+fi 
+
 ln -s $CFG_DIR/openbox ~/.config/openbox -f
 ln -s $CFG_DIR/tint2 ~/.config/tint2 -f
 
 #Tema reNIX de openbox
+if [ ! -d ~/.themes/reNIX ];then
+mkdir -p ~/.themes/reNIX
+fi
+
 ln -s $CFG_DIR/themes/reNIX/openbox-3 ~/.themes/reNIX/openbox-3 -f

@@ -21,4 +21,4 @@ sleep 20 && conky &
 nitrogen --restore &
 sleep 3 && tint2 &
 sleep 4 && wicd-gtk --tray &
-sleep 5 && volti &
+sleep 5 && volumeicon &

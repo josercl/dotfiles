@@ -61,6 +61,11 @@
 				<execute>wakfu</execute>
 			</action>
 		</item>
+		<item icon="/opt/WorldOfGoo/icons/64x64.png" label="WorldOfGoo">
+			<action name="Execute">
+				<execute>WorldOfGoo</execute>
+			</action>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/zsnes.png" label="Zsnes">
 			<action name="Execute">
 				<execute>zsnes</execute>

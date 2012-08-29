@@ -1,56 +1,35 @@
 URxvt.font:            xft:terminus:size=12:antialias=false
-URxvt.perl-ext-common: default,tabbedex,matcher,vtwheel,clipboard
+URxvt.perl-ext-common: default,tabbedex,matcher,vtwheel
 URxvt.tabbed.title:    false
 URxvt.urlLauncher:     chromium
 URxvt.matcher.button:  1
 
-! ----------------------------------------------------------------------
-! file:     Xdefaults color scheme
-! author:   Thayer Williams - http://cinderwick.ca
-! vim:enc=utf-8:nu:ai:si:et:ts=4:sts=4:sw=4:ft=xdefaults:
-! ----------------------------------------------------------------------
+URxvt*cursorColor: #335A80
 
-! Append the following to ~/.Xdefaults to import this color scheme:
-!   
-!       #include "/home/user/.Xdefaults.c.vimbrant"
-!
-! ----------------------------------------------------------------------
-! file:     Xdefaults color scheme
-! author:   Thayer Williams - http://cinderwick.ca
-! ----------------------------------------------------------------------
-
-! Append the following to ~/.Xdefaults to import this color scheme:
-!   
-!       #include "/home/user/.Xdefaults.c.vimbrant"
-!
-
-urxvt*cursorColor:      #335A80
-
-! terminal colours
-URxvt*foreground:#cfcfd9
-URxvt*background:#1c2027
-
+! terminal colors
+URxvt*foreground:  #cfcfd9
+URxvt*background:  #1c2027
 !black
-URxvt*color0:    #192033
-URxvt*color8:    #666666
+URxvt*color0:      #192033
+URxvt*color8:      #666666
 !red
-URxvt*color1:    #a62a3e
-URxvt*color9:    #f04758
+URxvt*color1:      #a62a3e
+URxvt*color9:      #f04758
 !green
-URxvt*color2:     #38912b
-URxvt*color10:    #93c724
+URxvt*color2:      #38912b
+URxvt*color10:     #93c724
 !yellow
-URxvt*color3:    #b27d12
-URxvt*color11:   #ddb62b
+URxvt*color3:      #b27d12
+URxvt*color11:     #ddb62b
 !blue
-URxvt*color4:     #355c9a
-URxvt*color12:    #45a3e6
+URxvt*color4:      #355c9a
+URxvt*color12:     #45a3e6
 !magenta
-URxvt*color5:    #7c4f9f
-URxvt*color13:   #c953ef
+URxvt*color5:      #7c4f9f
+URxvt*color13:     #c953ef
 !cyan
-URxvt*color6:    #258f8f
-URxvt*color14:   #60c6c8
+URxvt*color6:      #258f8f
+URxvt*color14:     #60c6c8
 !white
-URxvt*color7:    #77858c
-URxvt*color15:   #c0c0c0
+URxvt*color7:      #77858c
+URxvt*color15:     #c0c0c0

@@ -31,11 +31,6 @@
 		</item>
 	</menu>
 	<menu id="apps-games-menu" label="Games">
-		<item icon="/opt/dofus/share/icon/dofus-icon-32.png" label="Dofus">
-			<action name="Execute">
-				<execute>/opt/dofus/bin/Dofus</execute>
-			</action>
-		</item>
 		<item icon="/home/jose/Pictures/Minecraft-plain.png" label="Minecraft">
 			<action name="Execute">
 				<execute>/home/jose/bin/minecraft</execute>
@@ -54,11 +49,6 @@
 		<item icon="/usr/share/pixmaps/scummvm.xpm" label="ScummVM">
 			<action name="Execute">
 				<execute>scummvm</execute>
-			</action>
-		</item>
-		<item icon="/opt/wakfu/.install4j/Wakfu.png" label="Wakfu">
-			<action name="Execute">
-				<execute>wakfu</execute>
 			</action>
 		</item>
 		<item icon="/opt/WorldOfGoo/icons/64x64.png" label="WorldOfGoo">

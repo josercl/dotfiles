@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/doc/openbox/menu.xsd">
 
-    <menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
+   <menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
 
 	<menu id="apps-dev-menu" label="Development">
 		<item icon="/usr/share/icons/Faenza/apps/24/eclipse.png" label="Eclipse">
@@ -31,6 +31,11 @@
 		</item>
 	</menu>
 	<menu id="apps-games-menu" label="Games">
+		<item icon="/home/jose/Pictures/diablo2-icon.png" label="Diablo II">
+			<action name="Execute">
+				<execute>diablo2</execute>
+			</action>
+		</item>
 		<item icon="/home/jose/Pictures/Minecraft-plain.png" label="Minecraft">
 			<action name="Execute">
 				<execute>/home/jose/bin/minecraft</execute>
@@ -98,6 +103,11 @@
 		</item>
 	</menu>
 	<menu id="apps-office-menu" label="Office">
+	   <item label="FBReader">
+			<action name="Execute">
+				<command>FBReader</command>
+			</action>
+      </item>
 		<item icon="/usr/share/icons/Faenza/apps/24/libreoffice-base.png" label="LibreOffice Base">
 			<action name="Execute">
 				<command>libreoffice -base</command>
@@ -131,6 +141,11 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/libreoffice-printeradmin.png" label="LibreOffice Printer Administration">
 			<action name="Execute">
 				<command>libreoffice-printeradmin</command>
+			</action>
+		</item>
+	   <item label="TeXWorks">
+			<action name="Execute">
+				<command>texworks</command>
 			</action>
 		</item>
 	</menu>

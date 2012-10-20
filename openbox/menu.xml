@@ -103,6 +103,11 @@
 		</item>
 	</menu>
 	<menu id="apps-office-menu" label="Office">
+	   <item label="Evince" icon="/usr/share/icons/Faenza/apps/24/evince.png">
+			<action name="Execute">
+				<command>evince</command>
+			</action>
+		</item>
 	   <item label="FBReader">
 			<action name="Execute">
 				<command>FBReader</command>
@@ -205,6 +210,11 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
 			<action name="Execute">
 				<execute>vinagre</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/vuze.png" label="Vuze">
+			<action name="Execute">
+				<execute>vuze</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/wicd-gtk.xpm" label="Wicd">

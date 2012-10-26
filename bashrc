@@ -11,7 +11,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # User specific aliases and functions
-export PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[01;33m\]$(__git_ps1)\[\e[00m\]\$ '
+export PS1='\[\e[01;32m\]\u@\h\[\e[00m\] \[\e[01;34m\]\w\[\e[01;33m\]$(__git_ps1) \[\e[01;32m\]\$\[\e[00m\] '
 
 alias ls='ls --color=always'
 alias pacman='pacman-color'

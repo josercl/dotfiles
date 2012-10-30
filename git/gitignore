@@ -8,3 +8,6 @@
 Thumbs.db
 .mymetadata
 *.komodoproject
+*.o
+*.so
+*.a

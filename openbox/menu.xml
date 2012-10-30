@@ -19,14 +19,14 @@
 				<execute>mysql-workbench</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/netbeans.png" label="Netbeans">
-			<action name="Execute">
-				<execute>netbeans</execute>
-			</action>
-		</item>
 		<item icon="/usr/share/pixmaps/pgadmin3.png" label="Pgadmin">
 			<action name="Execute">
 				<execute>pgadmin3</execute>
+			</action>
+		</item>
+		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+			<action name="Execute">
+				<execute>sublime_text</execute>
 			</action>
 		</item>
 	</menu>
@@ -83,6 +83,11 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/text-editor.png" label="Gedit">
 			<action name="Execute">
 				<execute>gedit</execute>
+			</action>
+		</item>
+		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+			<action name="Execute">
+				<execute>sublime_text</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/tomboy.png" label="Tomboy Notes">

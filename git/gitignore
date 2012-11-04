@@ -11,3 +11,7 @@ Thumbs.db
 *.o
 *.so
 *.a
+*.dvi
+*.aux
+*.log
+*.toc

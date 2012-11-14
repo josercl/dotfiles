@@ -1,5 +1,5 @@
-URxvt.font:            xft:terminus:size=12:antialias=false
-URxvt.perl-ext-common: default,tabbedex,matcher,vtwheel
+URxvt.font:            -*-ohsnap-medium-r-*-*-15-*-*-*-*-*-*-*
+URxvt.perl-ext-common: default,tabbedex,matcher,vtwheel,clipboard
 URxvt.tabbed.title:    false
 URxvt.urlLauncher:     chromium
 URxvt.matcher.button:  1

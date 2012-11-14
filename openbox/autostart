@@ -15,6 +15,10 @@
 # If you want to use XFCE config tools...
 #
 xrdb -load ~/.Xresources
+
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
 setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 20 && conky &

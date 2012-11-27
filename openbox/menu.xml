@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/doc/openbox/menu.xsd">
 
-   <menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
+	<!-- ACCESORIES MENU -->
+	<menu id="apps-accessories-menu" label="Accessories">
+		<item icon="/usr/share/icons/Faenza/apps/24/file-roller.png" label="Archive Manager">
+			<action name="Execute">
+				<command>file-roller</command>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/text-editor.png" label="Gedit">
+			<action name="Execute">
+				<execute>gedit</execute>
+			</action>
+		</item>
+		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+			<action name="Execute">
+					<execute>sublime_text</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/tomboy.png" label="Tomboy Notes">
+			<action name="Execute">
+				<execute>tomboy</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/gnome-calculator.png" label="Calculator">
+			<action name="Execute">
+				<command>qalculate-gtk</command>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+	</menu>
 
+	<!-- DEVELOPMENT APPS MENU -->
 	<menu id="apps-dev-menu" label="Development">
 		<item icon="/usr/share/icons/Faenza/apps/24/eclipse.png" label="Eclipse">
 			<action name="Execute">
@@ -30,6 +63,8 @@
 			</action>
 		</item>
 	</menu>
+
+	<!-- GAMES MENU -->
 	<menu id="apps-games-menu" label="Games">
 		<item icon="/home/jose/Pictures/diablo2-icon.png" label="Diablo II">
 			<action name="Execute">
@@ -67,46 +102,120 @@
 			</action>
 		</item>
 	</menu>
-	<menu id="apps-fileman-menu" label="File Managers">
-        <item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="PCmanFM">
+
+	<!-- GRAPHICS APPLICATIONS MENU -->
+	<menu id="apps-graphics-menu" label="Graphics">
+		<item icon="/usr/share/icons/Faenza/apps/24/dia.png" label="Dia Diagram Editor">
 			<action name="Execute">
-				<command>pcmanfm</command>
+				<command>dia</command>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/gimp.png" label="Gimp">
+			<action name="Execute">
+				<command>gimp</command>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/comix.png" label="Mcomix">
+			<action name="Execute">
+				<execute>mcomix</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/ristretto.png" label="Ristretto">
+			<action name="Execute">
+				<execute>ristretto</execute>
 			</action>
 		</item>
 	</menu>
-	<menu id="apps-accessories-menu" label="Accessories">
-		<item icon="/usr/share/icons/Faenza/apps/24/file-roller.png" label="Archive Manager">
+	
+	<!-- NETWORK APPLICATIONS MENU -->
+	<menu id="apps-net-menu" label="Internet">
+        <item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
+		    <action name="Execute">
+			    <execute>chromium</execute>
+		    </action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/filezilla.png" label="Filezilla">
 			<action name="Execute">
-				<command>file-roller</command>
+				<execute>filezilla</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/text-editor.png" label="Gedit">
+		<item icon="/usr/share/icons/Faenza/apps/24/firefox.png" label="Firefox">
 			<action name="Execute">
-				<execute>gedit</execute>
+				<command>firefox</command>
 			</action>
 		</item>
-		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+        <item icon="" label="Linphone">
 			<action name="Execute">
-				<execute>sublime_text</execute>
+				<execute>linphone</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/tomboy.png" label="Tomboy Notes">
+		<item icon="/usr/share/icons/Faenza/apps/24/pidgin.png" label="Pidgin Instant Messenger">
 			<action name="Execute">
-				<execute>tomboy</execute>
+				<command>pidgin</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/gnome-calculator.png" label="Calculator">
+		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
 			<action name="Execute">
-				<command>qalculate-gtk</command>
+				<execute>skype</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
+		<item icon="/usr/share/icons/Faenza/apps/24/transmission.png" label="Transmission">
 			<action name="Execute">
-				<!--execute>exo-open launch TerminalEmulator</execute-->
-                <execute>urxvt</execute>
+				<execute>transmission-gtk</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/turpial.png" label="Turpial">
+			<action name="Execute">
+				<execute>turpial</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
+			<action name="Execute">
+				<execute>vinagre</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/vuze.png" label="Vuze">
+			<action name="Execute">
+				<execute>vuze</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/wicd-gtk.xpm" label="Wicd">
+			<action name="Execute">
+				<execute>wicd-gtk</execute>
+			</action>
+		</item>
+        <item icon="/usr/share/icons/Faenza/apps/24/wireshark.png" label="Wireshark">
+			<action name="Execute">
+				<execute>wireshark</execute>
 			</action>
 		</item>
 	</menu>
+
+	<!-- MULTIMEDIA -->
+	<menu id="apps-multimedia-menu" label="Multimedia">
+		<item label="MPD">
+			<action name="Execute">
+                <execute>urxvt -e musica</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/xfburn.png" label="Xfburn">
+			<action name="Execute">
+				<execute>xfburn</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/pixmaps/sonata.png" label="Sonata">
+			<action name="Execute">
+				<execute>sonata</execute>
+			</action>
+		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/totem.png" label="Totem">
+			<action name="Execute">
+				<command>totem</command>
+			</action>
+		</item>
+	</menu>
+	
+	<!-- OFFICE -->
 	<menu id="apps-office-menu" label="Office">
 	   <item label="Evince" icon="/usr/share/icons/Faenza/apps/24/evince.png">
 			<action name="Execute">
@@ -117,7 +226,7 @@
 			<action name="Execute">
 				<command>FBReader</command>
 			</action>
-      </item>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/libreoffice-base.png" label="LibreOffice Base">
 			<action name="Execute">
 				<command>libreoffice -base</command>
@@ -153,109 +262,23 @@
 				<command>libreoffice-printeradmin</command>
 			</action>
 		</item>
-	   <item label="TeXWorks">
+		<item label="TeXWorks">
 			<action name="Execute">
 				<command>texworks</command>
 			</action>
 		</item>
 	</menu>
-	<menu id="apps-net-menu" label="Internet">
-        <item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
-		    <action name="Execute">
-			    <execute>chromium</execute>
-		    </action>
-		</item>
-        <item icon="/usr/share/icons/Faenza/apps/24/ekiga.png" label="Ekiga">
+
+	<!-- FILE MANAGERS -->
+	<menu id="apps-fileman-menu" label="File Managers">
+        <item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="PCmanFM">
 			<action name="Execute">
-				<execute>ekiga</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/filezilla.png" label="Filezilla">
-			<action name="Execute">
-				<execute>filezilla</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/firefox.png" label="Firefox">
-			<action name="Execute">
-				<command>firefox</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-					<wmclass>Firefox</wmclass>
-				</startupnotify>
-			</action>
-		</item>
-        <item icon="" label="Linphone">
-			<action name="Execute">
-				<execute>linphone</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/pidgin.png" label="Pidgin Instant Messenger">
-			<action name="Execute">
-				<command>pidgin</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
-			<action name="Execute">
-				<execute>skype</execute>
-                <startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/transmission.png" label="Transmission">
-			<action name="Execute">
-				<execute>transmission-gtk</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/pixmaps/turpial.png" label="Turpial">
-			<action name="Execute">
-				<execute>turpial</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
-			<action name="Execute">
-				<execute>vinagre</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/pixmaps/vuze.png" label="Vuze">
-			<action name="Execute">
-				<execute>vuze</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/pixmaps/wicd-gtk.xpm" label="Wicd">
-			<action name="Execute">
-				<execute>wicd-gtk</execute>
-			</action>
-		</item>
-        <item icon="/usr/share/icons/Faenza/apps/24/wireshark.png" label="Wireshark">
-			<action name="Execute">
-				<execute>wireshark</execute>
+				<command>pcmanfm</command>
 			</action>
 		</item>
 	</menu>
-	<menu id="apps-multimedia-menu" label="Multimedia">
-		<item label="MPD">
-			<action name="Execute">
-				<!--execute>exo-open launch TerminalEmulator musica</execute-->
-                <execute>urxvt -e musica</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/xfburn.png" label="Xfburn">
-			<action name="Execute">
-				<execute>xfburn</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/pixmaps/sonata.png" label="Sonata">
-			<action name="Execute">
-				<execute>sonata</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/totem.png" label="Totem">
-			<action name="Execute">
-				<command>totem</command>
-			</action>
-		</item>
-	</menu>
+
+	<!-- SYSTEM TOOLS -->
 	<menu id="apps-system-menu" label="System Tools">
 		<item icon="/usr/share/pixmaps/dosbox.png" label="Dosbox">
 			<action name="Execute">
@@ -264,7 +287,6 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-				<!--execute>exo-open launch TerminalEmulator</execute-->
                 <execute>urxvt</execute>
 			</action>
 		</item>
@@ -279,62 +301,9 @@
 			</action>
 		</item>
 	</menu>
-	<menu id="apps-graphics-menu" label="Graphics">
-		<item icon="/usr/share/icons/Faenza/apps/24/dia.png" label="Dia Diagram Editor">
-			<action name="Execute">
-				<command>dia</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/gimp.png" label="Gimp">
-			<action name="Execute">
-				<command>gimp</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/comix.png" label="Mcomix">
-			<action name="Execute">
-				<execute>mcomix</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/ristretto.png" label="Ristretto">
-			<action name="Execute">
-				<execute>ristretto</execute>
-			</action>
-		</item>
-	</menu>
-	<menu id="system-menu" label="System">
-        <item label="Openbox Configuration Manager">
-			<action name="Execute">
-				<command>obconf</command>
-			</action>
-		</item>
-		<item label="Openbox Menu Editor">
-			<action name="Execute">
-				<execute>obmenu</execute>
-			</action>
-		</item>
-		<!--item label="Xfce Settings">
-			<action name="Execute">
-				<command>xfce-setting-show</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item-->
-		<item label="Manage Cups Printers">
-			<action name="Execute">
-				<command>xdg-open http://localhost:631/</command>
-				<startupnotify>
-					<enabled>no</enabled>
-					<icon>cups</icon>
-				</startupnotify>
-			</action>
-		</item>
-        <separator/>
-		<item label="Reconfigure Openbox">
-			<action name="Reconfigure"/>
-		</item>
-	</menu>
-    <menu id="pref-menu" label="Preferences">
+
+	<!-- PREFERENCES MENU -->
+	<menu id="pref-menu" label="Preferences">
         <menu id="randr-menu" />
         <item label="Desktop Wallpaper">
             <action name="Execute">
@@ -352,6 +321,35 @@
             </action>
         </item>
     </menu>
+
+    <!-- SYSTEM ADMINISTRATION MENU -->
+    <menu id="system-menu" label="System">
+        <item label="Openbox Configuration Manager">
+			<action name="Execute">
+				<command>obconf</command>
+			</action>
+		</item>
+		<item label="Openbox Menu Editor">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="Manage Cups Printers">
+			<action name="Execute">
+				<command>xdg-open http://localhost:631/</command>
+				<startupnotify>
+					<enabled>no</enabled>
+					<icon>cups</icon>
+				</startupnotify>
+			</action>
+		</item>
+        <separator/>
+		<item label="Reconfigure Openbox">
+			<action name="Reconfigure"/>
+		</item>
+	</menu>
+
+	<!-- EXIT -->
 	<menu id="exit-menu" label="Exit">
 		<item label="Log Out">
 			<action name="Execute">
@@ -384,8 +382,11 @@
 			</action>
 		</item>
 	</menu>
-    
 
+	<!-- CHANGE DISPLAY DYNAMIC MENU -->
+	<menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
+	
+	<!-- MAIN MENU -->
 	<menu id="root-menu" label="Openbox 3">
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
@@ -420,4 +421,5 @@
 		<separator/>
 		<menu id="exit-menu"/>
 	</menu>
+	
 </openbox_menu>

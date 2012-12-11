@@ -213,6 +213,11 @@
 				<command>totem</command>
 			</action>
 		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/vlc.png" label="VLC">
+			<action name="Execute">
+				<command>vlc</command>
+			</action>
+		</item>
 	</menu>
 	
 	<!-- OFFICE -->
@@ -301,6 +306,9 @@
 			</action>
 		</item>
 	</menu>
+	
+	<!-- CHANGE DISPLAY DYNAMIC MENU -->
+	<menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
 
 	<!-- PREFERENCES MENU -->
 	<menu id="pref-menu" label="Preferences">
@@ -382,9 +390,6 @@
 			</action>
 		</item>
 	</menu>
-
-	<!-- CHANGE DISPLAY DYNAMIC MENU -->
-	<menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
 	
 	<!-- MAIN MENU -->
 	<menu id="root-menu" label="Openbox 3">

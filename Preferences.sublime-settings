@@ -1,0 +1,17 @@
+{
+    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "font_face": "ohsnap",
+    "font_options": "no-antialias",
+    "font_size": 11,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "preview_on_click": false,
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "rulers": [120],
+    "highlight_line": true,
+    "highlight_modified_tabs":true,
+    "bold_folder_labels": true
+}

@@ -23,6 +23,7 @@ setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 20 && conky &
 nitrogen --restore &
+pcmanfm -d &
 sleep 3 && tint2 &
-sleep 4 && wicd-gtk --tray &
-sleep 5 && volumeicon &
+sleep 3 && wicd-gtk --tray &
+sleep 3 && volumeicon &

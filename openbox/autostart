@@ -21,7 +21,7 @@ xset fp rehash
 
 setxkbmap -layout latam
 xscreensaver -nosplash &
-sleep 20 && conky &
+sleep 3 && conky &
 nitrogen --restore &
 pcmanfm -d &
 sleep 3 && tint2 &

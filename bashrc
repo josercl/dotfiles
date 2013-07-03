@@ -14,7 +14,6 @@ fi
 export PS1='\[\e[01;32m\]\u@\h\[\e[00m\] \[\e[01;34m\]\w\[\e[01;33m\]$(__git_ps1) \[\e[01;32m\]\$\[\e[00m\] '
 
 alias ls='ls --color=always'
-alias pacman='pacman-color'
 alias vi='vim'
 
 JAVA_HOME=/usr/lib/jvm/java-7-openjdk

@@ -1,5 +1,9 @@
+bin/*.*
+*.d
 *.class
 *~
+*.dex
+*.dex.*
 .project
 .classpath
 .*ignore

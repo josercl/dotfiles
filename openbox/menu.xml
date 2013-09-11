@@ -76,9 +76,9 @@
 				<execute>/home/jose/bin/minecraft</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/pixmaps/pcsx-icon.png" label="PCSX">
+		<item icon="/usr/share/pixmaps/pcsxr-icon.png" label="PCSXR">
 			<action name="Execute">
-				<execute>pcsx</execute>
+				<execute>pcsxr</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/quake3.png" label="Quake III Arena">

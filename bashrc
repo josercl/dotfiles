@@ -6,8 +6,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Bash completion
-if [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+	source /usr/share/git/completion/git-prompt.sh
 fi
 
 # User specific aliases and functions

@@ -164,11 +164,6 @@
 				<execute>transmission-gtk</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/pixmaps/turpial.png" label="Turpial">
-			<action name="Execute">
-				<execute>turpial</execute>
-			</action>
-		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
 			<action name="Execute">
 				<execute>vinagre</execute>
@@ -182,11 +177,6 @@
 		<item icon="/usr/share/pixmaps/wicd-gtk.xpm" label="Wicd">
 			<action name="Execute">
 				<execute>wicd-gtk</execute>
-			</action>
-		</item>
-        <item icon="/usr/share/icons/Faenza/apps/24/wireshark.png" label="Wireshark">
-			<action name="Execute">
-				<execute>wireshark</execute>
 			</action>
 		</item>
 	</menu>
@@ -424,7 +414,12 @@
 		<separator label="System"/>
 		<menu id="system-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-system.png"/>
 		<separator/>
-		<menu id="exit-menu"/>
+		<!--menu id="exit-menu"/-->
+		<item label="Exit">
+			<action name="Execute">
+				<execute>oblogout</execute>
+			</action>
+		</item>
 	</menu>
 	
 </openbox_menu>

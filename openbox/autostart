@@ -19,6 +19,8 @@ xrdb -load ~/.Xresources
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+pulseaudio --start
+
 setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 3 && conky &

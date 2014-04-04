@@ -353,17 +353,20 @@
     <!-- Control de volumen con el teclado -->
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer set Master 5%- unmute</command>
+        <!--command>amixer set Master 5%- unmute</command-->
+		  <command>pulseaudio-ctl down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer set Master 5%+ unmute</command>
+        <!--command>amixer set Master 5%+ unmute</command-->
+		  <command>pulseaudio-ctl up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>amixer set Master toggle</command>
+        <!--command>amixer set Master toggle</command-->
+		  <command>pulseaudio-ctl mute</command>
       </action>
     </keybind>
     <keybind key="XF86Display">

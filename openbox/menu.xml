@@ -42,6 +42,11 @@
 				<execute>eclipse</execute>
 			</action>
 		</item>
+		<item icon="/opt/netbeans/nb/netbeans.png" label="Netbeans">
+			<action name="Execute">
+				<execute>netbeans</execute>
+			</action>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/geany.png" label="Geany">
 			<action name="Execute">
 				<execute>geany</execute>

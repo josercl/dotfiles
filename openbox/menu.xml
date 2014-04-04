@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/doc/openbox/menu.xsd">
-
 	<!-- ACCESORIES MENU -->
 	<menu id="apps-accessories-menu" label="Accessories">
 		<item icon="/usr/share/icons/Faenza/apps/24/file-roller.png" label="Archive Manager">
@@ -15,7 +14,7 @@
 		</item>
 		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
 			<action name="Execute">
-					<execute>sublime_text</execute>
+				<execute>sublime_text</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/tomboy.png" label="Tomboy Notes">
@@ -34,7 +33,6 @@
 			</action>
 		</item>
 	</menu>
-
 	<!-- DEVELOPMENT APPS MENU -->
 	<menu id="apps-dev-menu" label="Development">
 		<item icon="/usr/share/icons/Faenza/apps/24/eclipse.png" label="Eclipse">
@@ -47,9 +45,9 @@
 				<execute>netbeans</execute>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/geany.png" label="Geany">
+		<item icon="/home/jose/Downloads/android-studio/bin/idea.png" label="Android Studio">
 			<action name="Execute">
-				<execute>geany</execute>
+				<Execute>android-studio</Execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/mysql-workbench.png" label="MySQL Workbench">
@@ -68,7 +66,6 @@
 			</action>
 		</item>
 	</menu>
-
 	<!-- GAMES MENU -->
 	<menu id="apps-games-menu" label="Games">
 		<item icon="/home/jose/Pictures/diablo2-icon.png" label="Diablo II">
@@ -107,7 +104,6 @@
 			</action>
 		</item>
 	</menu>
-
 	<!-- GRAPHICS APPLICATIONS MENU -->
 	<menu id="apps-graphics-menu" label="Graphics">
 		<item icon="/usr/share/icons/Faenza/apps/24/dia.png" label="Dia Diagram Editor">
@@ -131,13 +127,12 @@
 			</action>
 		</item>
 	</menu>
-	
 	<!-- NETWORK APPLICATIONS MENU -->
 	<menu id="apps-net-menu" label="Internet">
-        <item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
-		    <action name="Execute">
-			    <execute>chromium</execute>
-		    </action>
+		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/filezilla.png" label="Filezilla">
 			<action name="Execute">
@@ -149,14 +144,9 @@
 				<command>firefox</command>
 			</action>
 		</item>
-        <item icon="" label="Linphone">
+		<item icon="" label="Linphone">
 			<action name="Execute">
 				<execute>linphone</execute>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/pidgin.png" label="Pidgin Instant Messenger">
-			<action name="Execute">
-				<command>pidgin</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
@@ -185,12 +175,11 @@
 			</action>
 		</item>
 	</menu>
-
 	<!-- MULTIMEDIA -->
 	<menu id="apps-multimedia-menu" label="Multimedia">
 		<item label="MPD">
 			<action name="Execute">
-                <execute>urxvt -e musica</execute>
+				<execute>urxvt -e musica</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/xfburn.png" label="Xfburn">
@@ -214,15 +203,14 @@
 			</action>
 		</item>
 	</menu>
-	
 	<!-- OFFICE -->
 	<menu id="apps-office-menu" label="Office">
-	   <item label="Evince" icon="/usr/share/icons/Faenza/apps/24/evince.png">
+		<item icon="/usr/share/icons/Faenza/apps/24/evince.png" label="Evince">
 			<action name="Execute">
 				<command>evince</command>
 			</action>
 		</item>
-	   <item label="FBReader">
+		<item label="FBReader">
 			<action name="Execute">
 				<command>FBReader</command>
 			</action>
@@ -268,16 +256,14 @@
 			</action>
 		</item>
 	</menu>
-
 	<!-- FILE MANAGERS -->
 	<menu id="apps-fileman-menu" label="File Managers">
-        <item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="PCmanFM">
+		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="PCmanFM">
 			<action name="Execute">
 				<command>pcmanfm</command>
 			</action>
 		</item>
 	</menu>
-
 	<!-- SYSTEM TOOLS -->
 	<menu id="apps-system-menu" label="System Tools">
 		<item icon="/usr/share/pixmaps/dosbox.png" label="Dosbox">
@@ -287,7 +273,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-                <execute>urxvt</execute>
+				<execute>urxvt</execute>
 			</action>
 		</item>
 		<item label="UNetbootin">
@@ -301,33 +287,30 @@
 			</action>
 		</item>
 	</menu>
-	
 	<!-- CHANGE DISPLAY DYNAMIC MENU -->
-	<menu id="randr-menu" label="Display" execute="python2.7 ~/.config/openbox/ob-randr.py" />
-
+	<menu execute="python2.7 ~/.config/openbox/ob-randr.py" id="randr-menu" label="Display"/>
 	<!-- PREFERENCES MENU -->
 	<menu id="pref-menu" label="Preferences">
-        <menu id="randr-menu" />
-        <item label="Desktop Wallpaper">
-            <action name="Execute">
-                <command>nitrogen ~/Pictures --no-recurse</command>
-            </action>
-        </item>
-        <item label="Screensaver Settings">
-            <action name="Execute">
-                <command>xscreensaver-demo</command>
-            </action>
-        </item>
-        <item label="Theme Settings">
-            <action name="Execute">
-                <command>lxappearance</command>
-            </action>
-        </item>
-    </menu>
-
-    <!-- SYSTEM ADMINISTRATION MENU -->
-    <menu id="system-menu" label="System">
-        <item label="Openbox Configuration Manager">
+		<menu id="randr-menu"/>
+		<item label="Desktop Wallpaper">
+			<action name="Execute">
+				<command>nitrogen ~/Pictures --no-recurse</command>
+			</action>
+		</item>
+		<item label="Screensaver Settings">
+			<action name="Execute">
+				<command>xscreensaver-demo</command>
+			</action>
+		</item>
+		<item label="Theme Settings">
+			<action name="Execute">
+				<command>lxappearance</command>
+			</action>
+		</item>
+	</menu>
+	<!-- SYSTEM ADMINISTRATION MENU -->
+	<menu id="system-menu" label="System">
+		<item label="Openbox Configuration Manager">
 			<action name="Execute">
 				<command>obconf</command>
 			</action>
@@ -346,12 +329,11 @@
 				</startupnotify>
 			</action>
 		</item>
-        <separator/>
+		<separator/>
 		<item label="Reconfigure Openbox">
 			<action name="Reconfigure"/>
 		</item>
 	</menu>
-
 	<!-- EXIT -->
 	<menu id="exit-menu" label="Exit">
 		<item label="Log Out">
@@ -363,35 +345,34 @@
 		<item label="Shutdown">
 			<action name="Execute">
 				<prompt>Shutdown</prompt>
-                <command>systemctl poweroff</command>
+				<command>systemctl poweroff</command>
 			</action>
 		</item>
 		<item label="Restart">
 			<action name="Execute">
 				<prompt>Restart</prompt>
-                <command>systemctl reboot</command>
+				<command>systemctl reboot</command>
 			</action>
 		</item>
 		<item label="Suspend">
 			<action name="Execute">
 				<prompt>Suspend</prompt>
-                <command>systemctl suspend</command>
+				<command>systemctl suspend</command>
 			</action>
 		</item>
 		<item label="Hibernate">
 			<action name="Execute">
 				<prompt>Hibernate</prompt>
-                <command>systemctl hibernate</command>
+				<command>systemctl hibernate</command>
 			</action>
 		</item>
 	</menu>
-	
 	<!-- MAIN MENU -->
 	<menu id="root-menu" label="Openbox 3">
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
 				<!--execute>exo-open launch TerminalEmulator</execute-->
-                <execute>urxvt</execute>
+				<execute>urxvt</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="Files">
@@ -400,24 +381,23 @@
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
-		    <action name="Execute">
-			    <execute>chromium</execute>
-		    </action>
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
 		</item>
 		<separator label="Applications"/>
-        
-		<menu id="apps-accessories-menu" icon="/usr/share/icons/Faenza/categories/24/applications-accessories.png"/>
-		<menu id="apps-dev-menu" icon="/usr/share/icons/Faenza/categories/24/applications-development.png"/>
-		<menu id="apps-games-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-games.png"/>
-		<menu id="apps-graphics-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-graphics.png"/>
-		<menu id="apps-net-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-internet.png"/>
-		<menu id="apps-multimedia-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-multimedia.png"/>
-		<menu id="apps-office-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-office.png"/>
-		<menu id="apps-fileman-menu"  icon="/usr/share/icons/Faenza/apps/24/nautilus.png"/>
-		<menu id="apps-system-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-system.png"/>
-        <menu id="pref-menu"  icon="/usr/share/icons/Faenza/categories/24/preferences-desktop.png"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-accessories.png" id="apps-accessories-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-development.png" id="apps-dev-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-games.png" id="apps-games-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-graphics.png" id="apps-graphics-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-internet.png" id="apps-net-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-multimedia.png" id="apps-multimedia-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-office.png" id="apps-office-menu"/>
+		<menu icon="/usr/share/icons/Faenza/apps/24/nautilus.png" id="apps-fileman-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-system.png" id="apps-system-menu"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/preferences-desktop.png" id="pref-menu"/>
 		<separator label="System"/>
-		<menu id="system-menu"  icon="/usr/share/icons/Faenza/categories/24/applications-system.png"/>
+		<menu icon="/usr/share/icons/Faenza/categories/24/applications-system.png" id="system-menu"/>
 		<separator/>
 		<!--menu id="exit-menu"/-->
 		<item label="Exit">
@@ -426,5 +406,4 @@
 			</action>
 		</item>
 	</menu>
-	
 </openbox_menu>

@@ -24,6 +24,9 @@ ln -s $CFG_DIR/vimrc ~/.vimrc -f
 #Configuracion de openbox
 ln -s $CFG_DIR/openbox/ob-randrrc ~/.ob-randrrc -f
 
+#Configuracion de gmrun
+ln -s $CFG_DIR/gmrunrc ~/.gmrunrc -f
+
 if [ ! -d ~/.config ];then
 mkdir ~/.config;
 fi 

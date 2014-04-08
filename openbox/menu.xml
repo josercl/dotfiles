@@ -101,6 +101,11 @@
 	</menu>
 	<!-- GRAPHICS APPLICATIONS MENU -->
 	<menu id="apps-graphics-menu" label="Graphics">
+		<item icon="/usr/share/icons/Faenza/apps/24/blender.png" label="Blender">
+			<action name="Execute">
+				<command>blender</command>
+			</action>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/dia.png" label="Dia Diagram Editor">
 			<action name="Execute">
 				<command>dia</command>

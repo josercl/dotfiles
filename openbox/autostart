@@ -21,7 +21,7 @@ xset fp rehash
 
 pulseaudio --start
 
-setxkbmap -layout latam
+setxkbmap -layout es
 xscreensaver -nosplash &
 sleep 3 && conky &
 nitrogen --restore &
@@ -29,3 +29,5 @@ pcmanfm -d &
 sleep 3 && tint2 &
 sleep 3 && wicd-gtk --tray &
 sleep 3 && volumeicon &
+
+desktime-linux &

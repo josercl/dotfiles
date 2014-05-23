@@ -40,9 +40,9 @@
 				<command>netbeans</command>
 			</action>
 		</item>
-		<item icon="/home/jose/Downloads/android-studio/bin/idea.png" label="Android Studio">
+		<item icon="/home/eseprin/Downloads/android-studio/bin/idea.png" label="Android Studio">
 			<action name="Execute">
-				<command>/home/jose/Downloads/android-studio/bin/studio.sh</command>
+				<command>/home/eseprin/Downloads/android-studio/bin/studio.sh</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/mysql-workbench.png" label="MySQL Workbench">
@@ -70,7 +70,7 @@
 		</item>
 		<item icon="/home/jose/Pictures/Minecraft-plain.png" label="Minecraft">
 			<action name="Execute">
-				<command>/home/jose/bin/minecraft</command>
+				<command>/home/eseprin/bin/minecraft</command>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/pcsxr-icon.png" label="PCSXR">
@@ -103,7 +103,7 @@
 	<menu id="apps-graphics-menu" label="Graphics">
 		<item icon="/usr/share/icons/Faenza/apps/24/blender.png" label="Blender">
 			<action name="Execute">
-				<command>blender</command>
+				<execute>blender</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/dia.png" label="Dia Diagram Editor">
@@ -144,24 +144,9 @@
 				<command>firefox</command>
 			</action>
 		</item>
-		<item icon="" label="Linphone">
+		<item icon="/usr/share/icons/Faenza/apps/24/thunderbird.png" label="Thunderbird">
 			<action name="Execute">
-				<command>linphone</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
-			<action name="Execute">
-				<command>skype</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/transmission.png" label="Transmission">
-			<action name="Execute">
-				<command>transmission-gtk</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
-			<action name="Execute">
-				<command>vinagre</command>
+				<command>thunderbird</command>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/vuze.png" label="Vuze">

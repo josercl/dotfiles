@@ -22,3 +22,5 @@ Thumbs.db
 *.sublime*
 *.out
 *.iml
+.idea
+project.properties

@@ -116,11 +116,6 @@
 				<command>gimp</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/comix.png" label="Mcomix">
-			<action name="Execute">
-				<command>mcomix</command>
-			</action>
-		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/ristretto.png" label="Ristretto">
 			<action name="Execute">
 				<command>ristretto</command>

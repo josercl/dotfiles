@@ -23,7 +23,16 @@ setxkbmap -layout latam
 xscreensaver -nosplash &
 sleep 3 && conky &
 nitrogen --restore &
-pcmanfm -d &
+#pcmanfm -d &
 sleep 3 && tint2 &
-sleep 4 && wicd-gtk --tray &
+
+if [ -f /etc/xdg/autostart/wicd-tray.desktop ]; then
+	#Nada, el .desktop se encarga de ejecutar el cliente wicd
+   echo "";
+else
+	sleep 4 && wicd-gtk --tray &
+fi
+
 sleep 4 && volumeicon &
+
+WLAN_IP=`ip addr show dev wlan0|grep inet|grep -vinet6|awk '{print $3}'`

@@ -10,8 +10,8 @@ ln -s $CFG_DIR/git/gitconfig ~/.gitconfig -f
 ln -s $CFG_DIR/git/gitignore ~/.gitignore -f
 
 #Configuracion de conky
-ln -s $CFG_DIR/conky/circles ~/.conky -f
-ln -s $CFG_DIR/conky/circles/conkyrc ~/.conkyrc -f
+ln -s $CFG_DIR/conky/text ~/.conky -f
+ln -s $CFG_DIR/conky/text/conkyrc ~/.conkyrc -f
 
 #Configuracion de MPD y ncmpcpp (MP3)
 ln -s $CFG_DIR/mpd ~/.mpd -f

@@ -32,7 +32,7 @@
 	<menu id="apps-dev-menu" label="Development">
 		<item icon="/usr/share/icons/Faenza/apps/24/eclipse.png" label="Eclipse">
 			<action name="Execute">
-				<command>eclipse</command>
+				<command>/usr/bin/eclipse</command>
 			</action>
 		</item>
 		<item icon="/opt/netbeans/nb/netbeans.png" label="Netbeans">
@@ -139,11 +139,6 @@
 				<command>firefox</command>
 			</action>
 		</item>
-		<item icon="" label="Linphone">
-			<action name="Execute">
-				<command>linphone</command>
-			</action>
-		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
 			<action name="Execute">
 				<command>skype</command>
@@ -157,11 +152,6 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/vinagre.png" label="Vinagre">
 			<action name="Execute">
 				<command>vinagre</command>
-			</action>
-		</item>
-		<item icon="/usr/share/pixmaps/vuze.png" label="Vuze">
-			<action name="Execute">
-				<command>vuze</command>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/wicd-gtk.xpm" label="Wicd">
@@ -208,11 +198,6 @@
 		<item label="FBReader">
 			<action name="Execute">
 				<command>FBReader</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/libreoffice-base.png" label="LibreOffice Base">
-			<action name="Execute">
-				<command>libreoffice -base</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/libreoffice-calc.png" label="LibreOffice Calc">

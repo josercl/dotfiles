@@ -24,7 +24,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-				<command>urxvt</command>
+				<command>urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"</command>
 			</action>
 		</item>
 	</menu>
@@ -253,7 +253,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-				<command>urxvt</command>
+				<command>urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"</command>
 			</action>
 		</item>
 		<item label="UNetbootin">
@@ -352,7 +352,7 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
 				<!--execute>exo-open launch TerminalEmulator</execute-->
-				<command>urxvt</command>
+				<command>urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="Files">

@@ -70,7 +70,7 @@
 		</item>
 		<item icon="/home/jose/Pictures/Minecraft-plain.png" label="Minecraft">
 			<action name="Execute">
-				<command>/home/eseprin/bin/minecraft</command>
+				<command>/home/jose/bin/minecraft</command>
 			</action>
 		</item>
 		<item icon="/usr/share/pixmaps/pcsxr-icon.png" label="PCSXR">
@@ -129,6 +129,11 @@
 				<command>chromium</command>
 			</action>
 		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/deluge.png" label="Deluge">
+			<action name="Execute">
+				<command>deluge</command>
+			</action>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/filezilla.png" label="Filezilla">
 			<action name="Execute">
 				<command>filezilla</command>
@@ -139,7 +144,6 @@
 				<command>firefox</command>
 			</action>
 		</item>
-<<<<<<< HEAD
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
 			<action name="Execute">
 				<command>skype</command>

@@ -27,6 +27,9 @@ ln -s $CFG_DIR/openbox/ob-randrrc ~/.ob-randrrc -f
 #Configuracion de gmrun
 ln -s $CFG_DIR/gmrunrc ~/.gmrunrc -f
 
+#Configuracion "basica" de tmux
+ln -s $CFG_DIR/tmux.conf ~/.tmux.conf -f
+
 if [ ! -d ~/.config ];then
 mkdir ~/.config;
 fi 

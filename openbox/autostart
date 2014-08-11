@@ -29,12 +29,12 @@ nitrogen --restore &
 #pcmanfm -d &
 sleep 3 && tint2 &
 
-#if [ -f /etc/xdg/autostart/wicd-tray.desktop ]; then
+if [ -f /etc/xdg/autostart/wicd-tray.desktop ]; then
 	#Nada, el .desktop se encarga de ejecutar el cliente wicd
-#   echo "";
-#else
+   echo "";
+else
 	sleep 4 && wicd-gtk --tray &
-#fi
+fi
 
 sleep 4 && volumeicon &
 #sleep 4 && pasystray &

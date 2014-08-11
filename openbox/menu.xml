@@ -144,6 +144,11 @@
 				<command>firefox</command>
 			</action>
 		</item>
+		<item icon="/usr/share/icons/Faenza/apps/24/pidgin.png" label="Pidgin">
+			<action name="Execute">
+				<command>pidgin</command>
+			</action>
+		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
 			<action name="Execute">
 				<command>skype</command>

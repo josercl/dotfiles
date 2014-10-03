@@ -49,5 +49,5 @@ ${color FF5C00}${goto 40}${voffset 40} /
 ${goto 40}${fs_used_perc /}%${color}
 ${color FFEB00}${goto 148}${voffset 0}/home
 ${goto 148} ${fs_used_perc /home}%${color}
-${voffset 42}${alignc}${font Terminus:size=9}${if_up net0}IP: ${addr net0}${endif}
+${voffset 42}${alignc}${font Terminus:size=9}${if_up enp7s0}IP: ${addr enp7s0}${endif}
 ${alignc}${if_up wlan0}IP (wlan): ${addr wlan0}${endif}${font}

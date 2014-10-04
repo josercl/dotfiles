@@ -284,7 +284,7 @@ empty_tag_marker = "-------"
 ## browser screen.
 ##
 #
-allow_physical_files_deletion = "yes"
+#allow_physical_files_deletion = "yes"
 #
 #allow_physical_directories_deletion = "no"
 #
@@ -295,7 +295,7 @@ allow_physical_files_deletion = "yes"
 ## - 1 - lyricsplugin.com
 ##
 
-lyrics_database = "1"
+#lyrics_database = "1"
 #
 #external_editor = ""
 #

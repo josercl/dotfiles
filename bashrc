@@ -48,8 +48,8 @@ export PS1="${COLOR_GREEN_BOLD}\u@\h ${COLOR_BLUE_BOLD}\w${COLOR_YELLOW_BOLD}${G
 alias ls='ls --color=always'
 alias vi='vim'
 
-JAVA_HOME=/opt/java
-PATH=$PATH:$JAVA_HOME/bin:$HOME/bin:$HOME/android-sdk-linux/platform-tools:$HOME/android-sdk-linux/tools
+JAVA_HOME=/usr/lib/jvm/java-default-runtime
+PATH=$PATH:$JAVA_HOME/bin:$HOME/bin:$HOME/inventos/android/android-sdk-linux/platform-tools:$HOME/inventos/android/android-sdk-linux/tools
 
 LS_COLORS="or=00;31:ow=01;44;32:ex=01;33:*.iso=00;34:*.mp3=00;33:*.png=00;35:*.jpg=00;35:*.jpeg=00;35:*.JPG=00;35:*.gif=00;35"
 

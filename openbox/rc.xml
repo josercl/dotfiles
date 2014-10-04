@@ -374,22 +374,22 @@
     <!-- Control de MPD con los botones del teclado -->
     <keybind key="XF86AudioPlay">
       <action name="Execute">
-        <command>ncmpcpp toggle</command>
+        <command>mpc toggle</command>
       </action>
     </keybind>
     <keybind key="XF86AudioStop">
       <action name="Execute">
-        <command>ncmpcpp stop</command>
+        <command>mpc stop</command>
       </action>
     </keybind>
     <keybind key="XF86AudioNext">
       <action name="Execute">
-        <command>ncmpcpp next</command>
+        <command>mpc next</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPrev">
       <action name="Execute">
-        <command>ncmpcpp prev</command>
+        <command>mpc prev</command>
       </action>
     </keybind>
     <!-- Pseudo-tiling de las ventanas -->

@@ -370,9 +370,9 @@
 				<command>pcmanfm</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chromium">
+		<item icon="/usr/share/icons/Faenza/apps/24/firefox.png" label="Firefox">
 			<action name="Execute">
-				<command>chromium</command>
+				<command>firefox</command>
 			</action>
 		</item>
 		<separator label="Applications"/>

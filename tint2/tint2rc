@@ -70,7 +70,8 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
 
 # Fonts
-task_font = Ohsnap 11
+#task_font = Ohsnap 11
+task_font = Terminus 10
 task_font_color = #FFFFFF 100
 task_active_font_color = #FFFFFF 100
 task_urgent_font_color = #181818 100
@@ -87,9 +88,11 @@ systray_icon_asb = 100 0 0
 
 # Clock
 time1_format = %a, %d %b
-time1_font = Ohsnap Bold 9
+#time1_font = Ohsnap Bold 9
+time1_font = Terminus Bold 9
 time2_format = %H:%M
-time2_font = Ohsnap Bold 9
+#time2_font = Ohsnap Bold 9
+time2_font = Terminus Bold 9
 clock_font_color = #A5E12D 100
 clock_padding = 5 0
 clock_background_id = 4
@@ -101,7 +104,8 @@ tooltip_padding = 2 2
 tooltip_show_timeout = 0.7
 tooltip_hide_timeout = 0.3
 tooltip_background_id = 2
-tooltip_font = Ohsnap 9
+#tooltip_font = Ohsnap 9
+tooltip_font = Terminus 9
 tooltip_font_color = #FFFFFF 100
 
 # Mouse
@@ -115,8 +119,10 @@ battery = 1
 battery_low_status = 10
 battery_low_cmd = notify-send "battery low"
 battery_hide = 100
-bat1_font = Ohsnap Bold 11
-bat2_font = Ohsnap Bold 9
+#bat1_font = Ohsnap Bold 11
+#bat2_font = Ohsnap Bold 9
+bat1_font = Terminus Bold 11
+bat2_font = Terminus Bold 9
 battery_font_color = #A5E12D 100
 battery_padding = 5 0
 battery_background_id = 4

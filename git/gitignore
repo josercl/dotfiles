@@ -19,7 +19,7 @@ Thumbs.db
 *.aux
 *.log
 *.toc
-*.sublime*
+*.sublime-workspace*
 *.out
 *.iml
 .idea

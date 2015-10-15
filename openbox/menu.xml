@@ -12,7 +12,7 @@
 				<command>gedit</command>
 			</action>
 		</item>
-		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text">
 			<action name="Execute">
 				<command>sublime_text</command>
 			</action>
@@ -24,7 +24,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-				<command>urxvt -e bash -c "tmux"</command>
+				<command>urxvt</command>
 			</action>
 		</item>
 	</menu>
@@ -55,7 +55,7 @@
 				<command>pgadmin3</command>
 			</action>
 		</item>
-		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text 2">
+		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text">
 			<action name="Execute">
 				<command>sublime_text</command>
 			</action>
@@ -129,11 +129,6 @@
 				<command>chromium</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/deluge.png" label="Deluge">
-			<action name="Execute">
-				<command>deluge</command>
-			</action>
-		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/filezilla.png" label="Filezilla">
 			<action name="Execute">
 				<command>filezilla</command>
@@ -142,11 +137,6 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/firefox.png" label="Firefox">
 			<action name="Execute">
 				<command>firefox</command>
-			</action>
-		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/pidgin.png" label="Pidgin">
-			<action name="Execute">
-				<command>pidgin</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/skype.png" label="Skype">
@@ -263,7 +253,7 @@
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
-				<command>urxvt -e bash -c "tmux"</command>
+				<command>urxvt</command>
 			</action>
 		</item>
 		<item label="UNetbootin">
@@ -362,7 +352,7 @@
 		<item icon="/usr/share/icons/Faenza/apps/24/terminal.png" label="Terminal">
 			<action name="Execute">
 				<!--execute>exo-open launch TerminalEmulator</execute-->
-				<command>urxvt -e bash -c "tmux"</command>
+				<command>urxvt</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/nautilus.png" label="Files">
@@ -370,9 +360,9 @@
 				<command>pcmanfm</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/firefox.png" label="Firefox">
+		<item icon="/usr/share/icons/Faenza/apps/24/google-chrome.png" label="Chrome">
 			<action name="Execute">
-				<command>firefox</command>
+				<command>google-chrome-stable</command>
 			</action>
 		</item>
 		<separator label="Applications"/>

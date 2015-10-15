@@ -44,3 +44,5 @@ fi
 
 ln -s $CFG_DIR/themes/reNIX/openbox-3 ~/.themes/reNIX/openbox-3 -f
 ln -s $CFG_DIR/themes/reNIX-ACID ~/.themes/reNIX-ACID -f
+
+ln -s $CFG_DIR/i3 ~/.config/i3 -f

@@ -30,7 +30,7 @@ PH=48
 PX=533
 PY=372
 
-echo "%{c}  %{A:p:}Shutdown%{A}  %{A:r:}Reboot%{A}  %{A:s:}Suspend%{A}  %{A:b:}Exit%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT3" -f "$FONT5" -B "$BG" -F "$FG" -dp | \
+echo "%{c}  %{A:p:}Shutdown%{A}  %{A:r:}Reboot%{A}  %{A:s:}Suspend%{A}  %{A:b:}Exit%{A}  %{A:c:}Cancel%{A}" | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT3" -f "$FONT5" -B "$BG" -F "$FG" -dp | \
     while :; do
         read line
         case $line in 
@@ -51,6 +51,9 @@ echo "%{c}  %{A:p:}Shutdown%{A}  %{A:r:}Reboot%{A}  %{A:s:}Suspend%{A}  %{A:b
                 ;;
             'r')
                 sudo /sbin/shutdown -r now
+                exit
+                ;;
+            'c')
                 exit
                 ;;
         esac

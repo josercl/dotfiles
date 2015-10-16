@@ -1,8 +1,7 @@
-!URxvt.font:            -*-ohsnap-medium-r-*-*-14-*-*-*-*-*-*-*
-URxvt.font: xft:Dina:size=8
+URxvt.font: xft:Input Mono:size=10
 URxvt.perl-ext-common: default,matcher,vtwheel,clipboard,font-size,tabbedex
 URxvt.tabbed.title:    false
-URxvt.urlLauncher:     chromium
+URxvt.urlLauncher:     /usr/bin/xdg-open
 URxvt.matcher.button:  1
 
 URxvt.keysym.C-plus: perl:font-size:increase
@@ -10,38 +9,91 @@ URxvt.keysym.C-minus: perl:font-size:decrease
 URxvt.keysym.C-Insert: perl:clipboard:copy 
 URxvt.keysym.S-Insert: perl:clipboard:paste
 
-URxvt*background: #272822
-URxvt*foreground: #f8f8f2
-URxvt*cursorColor: #f8f8f2
+!URxvt*background: #272822
+!URxvt*foreground: #f8f8f2
+!URxvt*cursorColor: #f8f8f2
 
 !black
-URxvt*color0: #272822
-URxvt*color8: #232320
+!URxvt*color0: #272822
+!URxvt*color8: #232320
 
 !red
-URxvt*color1: #a62a3e
-URxvt*color9: #f92672
+!URxvt*color1: #a62a3e
+!URxvt*color9: #f92672
 
 !green
-URxvt*color2: #a6e22e
-URxvt*color10: #a6e22e
+!URxvt*color2: #a6e22e
+!URxvt*color10: #a6e22e
 
 !yellow
-URxvt*color3: #b27d12
-URxvt*color11: #e6db74
+!URxvt*color3: #b27d12
+!URxvt*color11: #e6db74
 
 !blue
-URxvt*color4: #30309b
-URxvt*color12: #5f5fee
+!URxvt*color4: #30309b
+!URxvt*color12: #5f5fee
 
 !magenta
-URxvt*color5: #ae81ff
-URxvt*color13: #ae81ff
+!URxvt*color5: #ae81ff
+!URxvt*color13: #ae81ff
 
 !cyan
-URxvt*color6: #66d9ef
-URxvt*color14: #66d9ef
+!URxvt*color6: #66d9ef
+!URxvt*color14: #66d9ef
 
 !white
-URxvt*color7: #8f908a
-URxvt*color15: #f8f8f2
+!URxvt*color7: #8f908a
+!URxvt*color15: #f8f8f2
+
+#define base00 #2C3E50
+#define base01 #34495E
+#define base02 #7F8C8D
+#define base03 #95A5A6
+#define base04 #BDC3C7
+#define base05 #e0e0e0
+#define base06 #f5f5f5
+#define base07 #ECF0F1
+#define base08 #E74C3C
+#define base09 #E67E22
+#define base0A #F1C40F
+#define base0B #2ECC71
+#define base0C #1ABC9C
+#define base0D #3498DB
+#define base0E #9B59B6
+#define base0F #be643c
+
+*.foreground:   #e0e0e0
+*.background:   #2C3E50
+*.cursorColor:  #e0e0e0
+
+*.color0:       #2C3E50
+*.color1:       #E74C3C
+*.color2:       #2ECC71
+*.color3:       #F1C40F
+*.color4:       #3498DB
+*.color5:       #9B59B6
+*.color6:       #9B59B6
+*.color7:       #e0e0e0
+
+*.color8:       base03
+*.color9:       #E74C3C
+*.color10:      #2ECC71
+*.color11:      #F1C40F
+*.color12:      #3498DB
+*.color13:      #9B59B6
+*.color14:      #9B59B6
+*.color15:      #ECF0F1
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      #E67E22
+*.color17:      #be643c
+*.color18:      #34495E
+*.color19:      #7F8C8D
+*.color20:      #BDC3C7
+*.color21:      #f5f5f5
+
+rofi.opacity: 50
+rofi.width: 50
+rofi.lines: 5
+rofi.font: Input Mono 10

@@ -36,15 +36,27 @@ border_color = #2c3e50 100
 # Background 6
 rounded = 0
 border_width = 0
+background_color = #2ecc71 100
+border_color = #2ecc71 100
+
+# Background 7
+rounded = 0
+border_width = 0
+background_color = #e74c3c 100
+border_color = #e74c3c 100
+
+# Background 8
+rounded = 0
+border_width = 0
 background_color = #3498db 100
-border_color = #f1c40f 100
+border_color = #3498db 100
 
 #-------------------------------------
 # Panel
-panel_items = TBSC
+panel_items = TSC
 panel_size = 100% 30
 panel_margin = 0 0
-panel_padding = 4 0 7
+panel_padding = 4 0 4
 panel_background_id = 5
 wm_menu = 1
 panel_dock = 0
@@ -87,20 +99,17 @@ task_centered = 0
 urgent_nb_of_blink = 8
 task_maximum_size = 1280 35
 task_padding = 6 5 6
-task_font = Input Mono 10
+task_font = Input Mono Bold 10
 task_tooltip = 1
 task_font_color = #2ecc71 100
 task_active_font_color = #f1c40f 100
-task_urgent_font_color = #f1c40f 100
-task_iconified_font_color = #ffffff 60
+task_urgent_font_color = #2c3e50 100
 task_icon_asb = 70 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 70 0 0
-task_background_id = 0
-task_active_background_id = 5
-task_urgent_background_id = 6
-task_iconified_background_id = 0
+task_background_id = 5
+task_urgent_background_id = 7
 mouse_left = toggle_iconify
 mouse_middle = none
 mouse_right = none
@@ -118,24 +127,29 @@ systray_monitor = 1
 
 #-------------------------------------
 # Launcher
-launcher_padding = 0 0 0
-launcher_background_id = 0
-launcher_icon_size = 0
-launcher_icon_asb = 0 -100 -100
+launcher_padding = 4 0 0
+launcher_background_id = 5
+launcher_icon_size = 32
+launcher_icon_asb = 0 0 0
+launcher_icon_theme = Numix
 launcher_icon_theme_override = 0
 startup_notifications = 0
 launcher_tooltip = 0
+launcher_item_app = /usr/share/applications/google-chrome.desktop
+launcher_item_app = /usr/share/applications/firefox.desktop
+launcher_item_app = /usr/share/applications/pcmanfm.desktop
+launcher_item_app = /usr/share/applications/sublime_text.desktop
 
 #-------------------------------------
 # Clock
-time1_format = %a, %d %b
-time2_format = %H:%M
-time1_font = Input Mono 9
+time1_format = %a, %d %b %H:%M
+time2_format = 
+time1_font = Input Mono Bold 9
 time1_timezone = 
 time2_timezone = 
-time2_font = Input Mono 9
+time2_font = Terminus Bold 9
 clock_font_color = #e74c3c 100
-clock_padding = 5 0
+clock_padding = 0 0
 clock_background_id = 5
 clock_tooltip = 
 clock_tooltip_timezone = 
@@ -168,5 +182,5 @@ tooltip_hide_timeout = 0.3
 tooltip_padding = 2 2
 tooltip_background_id = 2
 tooltip_font_color = #ffffff 100
-tooltip_font = Terminus 9
+tooltip_font = Input Mono 9
 

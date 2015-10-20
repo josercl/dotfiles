@@ -38,11 +38,16 @@ gap_y 5
 gap_x 0
 
 color1 333333 # Gray
-color2 006FC0 # Blue
-color3 8AD749 # Green
-color4 EECE01 # Yellow
+#color2 006FC0 # Blue
+#color3 8AD749 # Green
+#color4 EECE01 # Yellow
 color5 F8981F # Orange
-color6 F80E27 # Red
+#color6 F80E27 # Red
+
+color2 3498DB #blue
+color3 2ECC71 #green
+color4 F1C40F #yellow
+color6 E74C3C #Red
 
 TEXT
 ${font ohsnap}

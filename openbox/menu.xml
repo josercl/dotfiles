@@ -12,9 +12,9 @@
 				<command>gedit</command>
 			</action>
 		</item>
-		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text">
+		<item icon="/opt/sublime_text_3/Icon/32x32/sublime-text.png" label="Sublime Text">
 			<action name="Execute">
-				<command>sublime_text</command>
+				<command>subl3</3>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/gnome-calculator.png" label="Calculator">
@@ -40,9 +40,9 @@
 				<command>netbeans</command>
 			</action>
 		</item>
-		<item icon="/home/eseprin/Downloads/android-studio/bin/idea.png" label="Android Studio">
+		<item icon="/home/jose/Downloads/android-studio/bin/idea.png" label="Android Studio">
 			<action name="Execute">
-				<command>/home/eseprin/Downloads/android-studio/bin/studio.sh</command>
+				<command>/home/jose/Downloads/android-studio/bin/studio.sh</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/mysql-workbench.png" label="MySQL Workbench">
@@ -55,9 +55,9 @@
 				<command>pgadmin3</command>
 			</action>
 		</item>
-		<item icon="/opt/Sublime Text 2/Icon/32x32/sublime_text.png" label="Sublime Text">
+		<item icon="/opt/sublime_text_3/Icon/32x32/sublime-text.png" label="Sublime Text">
 			<action name="Execute">
-				<command>sublime_text</command>
+				<command>subl3</command>
 			</action>
 		</item>
 	</menu>
@@ -360,9 +360,9 @@
 				<command>pcmanfm</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/google-chrome.png" label="Chrome">
+		<item icon="/usr/share/icons/Faenza/apps/24/chromium.png" label="Chrome">
 			<action name="Execute">
-				<command>google-chrome-stable</command>
+				<command>chromium</command>
 			</action>
 		</item>
 		<separator label="Applications"/>

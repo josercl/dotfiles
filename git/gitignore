@@ -26,3 +26,7 @@ Thumbs.db
 .idea
 project.properties
 Proxies
+ci_session*
+node_modules
+.env
+bower_components

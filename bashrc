@@ -47,7 +47,6 @@ export PS1="${COLOR_GREEN_BOLD}\u@\h ${COLOR_BLUE_BOLD}\w${COLOR_YELLOW_BOLD}${G
 
 alias ls='ls --color=always'
 alias vi='vim'
-alias yaourt='yaourt --aur-url https://aur4.archlinux.org'
 
 JAVA_HOME=/usr/lib/jvm/java-default-runtime
 PATH=$PATH:$JAVA_HOME/bin:$HOME/bin:$HOME/inventos/android/android-sdk-linux/platform-tools:$HOME/inventos/android/android-sdk-linux/tools

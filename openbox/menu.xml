@@ -35,14 +35,19 @@
 				<command>/usr/bin/eclipse</command>
 			</action>
 		</item>
-		<item icon="/opt/netbeans/nb/netbeans.png" label="Netbeans">
-			<action name="Execute">
-				<command>netbeans</command>
-			</action>
-		</item>
-		<item icon="/home/jose/Downloads/android-studio/bin/idea.png" label="Android Studio">
+		<item icon="/home/jose/Downloads/android-studio/bin/studio.png" label="Android Studio">
 			<action name="Execute">
 				<command>/home/jose/Downloads/android-studio/bin/studio.sh</command>
+			</action>
+		</item>
+		<item icon="/usr/share/intellij-idea-ultimate-edition/bin/idea.png" label="Intellij Idea">
+			<action name="Execute">
+				<command>idea</command>
+			</action>
+		</item>
+		<item icon="/opt/phpstorm/bin/webide.png" label="Intellij PhpStorm">
+			<action name="Execute">
+				<command>phpstorm</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/mysql-workbench.png" label="MySQL Workbench">

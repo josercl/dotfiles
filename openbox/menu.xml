@@ -42,7 +42,7 @@
 		</item>
 		<item icon="/usr/share/intellij-idea-ultimate-edition/bin/idea.png" label="Intellij Idea">
 			<action name="Execute">
-				<command>idea</command>
+				<command>intellij-idea-ultimate-edition</command>
 			</action>
 		</item>
 		<item icon="/opt/phpstorm/bin/webide.png" label="Intellij PhpStorm">

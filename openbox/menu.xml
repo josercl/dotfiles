@@ -35,9 +35,9 @@
 				<command>/usr/bin/eclipse</command>
 			</action>
 		</item>
-		<item icon="/home/jose/Downloads/android-studio/bin/studio.png" label="Android Studio">
+		<item icon="/opt/android-studio/bin/studio.png" label="Android Studio">
 			<action name="Execute">
-				<command>/home/jose/Downloads/android-studio/bin/studio.sh</command>
+				<command>android-studio</command>
 			</action>
 		</item>
 		<item icon="/usr/share/intellij-idea-ultimate-edition/bin/idea.png" label="Intellij Idea">

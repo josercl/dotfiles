@@ -50,7 +50,7 @@
 				<command>phpstorm</command>
 			</action>
 		</item>
-		<item icon="/usr/share/icons/Faenza/apps/24/mysql-workbench.png" label="MySQL Workbench">
+		<item icon="/usr/share/icons/hicolor/24x24/apps/mysql-workbench.png" label="MySQL Workbench">
 			<action name="Execute">
 				<command>mysql-workbench</command>
 			</action>

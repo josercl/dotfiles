@@ -14,7 +14,7 @@
 		</item>
 		<item icon="/opt/sublime_text_3/Icon/32x32/sublime-text.png" label="Sublime Text">
 			<action name="Execute">
-				<command>subl3</3>
+				<command>subl3</command>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Faenza/apps/24/gnome-calculator.png" label="Calculator">

@@ -58,10 +58,18 @@ ${color}RAM   ${if_match ${memperc} >0}${color2}${else}${color1}${endif}O${if_ma
 ${color}SWAP  ${if_match ${swapperc} >0}${color2}${else}${color1}${endif}O${if_match ${swapperc} >10}${color2}${else}${color1}${endif}O${if_match ${swapperc} >20}${color3}${else}${color1}${endif}O${if_match ${swapperc} >30}${color3}${else}${color1}${endif}O${if_match ${swapperc} >40}${color4}${else}${color1}${endif}O${if_match ${swapperc} >50}${color4}${else}${color1}${endif}O${if_match ${swapperc} >60}${color5}${else}${color1}${endif}O${if_match ${swapperc} >70}${color5}${else}${color1}${endif}O${if_match ${swapperc} >80}${color6}${else}${color1}${endif}O${if_match ${swapperc} >90}${color6}${else}${color1}${endif}O ${color}${swapperc}%
 ${hr}
 ${color}/     ${if_match ${fs_used_perc /} >0}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /} >10}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /} >20}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /} >30}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /} >40}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /} >50}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /} >60}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /} >70}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /} >80}${color6}${else}${color1}${endif}O${if_match ${fs_used_perc /} >90}${color6}${else}${color1}${endif}O ${color}${fs_used_perc /}%
+<<<<<<< HEAD
 ${color}/home ${if_match ${fs_used_perc /home/apokdev} >0}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >10}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >20}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >30}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >40}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >50}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >60}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >70}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >80}${color6}${else}${color1}${endif}O${if_match ${fs_used_perc /home/apokdev} >90}${color6}${else}${color1}${endif}O ${color}${fs_used_perc /home/apokdev}%
 ${hr}
 ${font ohsnap:size=9}
 IP (enp1s0) : ${if_up enp1s0}${addr enp1s0}${else} - ${endif}
 IP (wlp2s0): ${if_up wlp2s0}${addr wlp2s0}${else} - ${endif}
+=======
+${color}/home ${if_match ${fs_used_perc /home/jose} >0}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >10}${color2}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >20}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >30}${color3}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >40}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >50}${color4}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >60}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >70}${color5}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >80}${color6}${else}${color1}${endif}O${if_match ${fs_used_perc /home/jose} >90}${color6}${else}${color1}${endif}O ${color}${fs_used_perc /home/jose}%
+${hr}
+${font ohsnap:size=9}
+IP (enp7s0) : ${if_up enp7s0}${addr enp7s0}${else} - ${endif}
+IP (wlan0): ${if_up wlan0}${addr wlan0}${else} - ${endif}
+>>>>>>> 15a1d9903e8326e721cc6eaad888e1f37f06569d
 ${font}
 ${font}

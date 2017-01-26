@@ -3,6 +3,7 @@
 # full documentation of the configuration options.
 #-------------------------------------
 # Backgrounds
+
 # Background 1: Active taskbar, Panel
 rounded = 0
 border_width = 0
@@ -127,6 +128,7 @@ mouse_scroll_down = next_task
 
 #-------------------------------------
 # System tray (notification area)
+<<<<<<< HEAD
 systray_padding = 0 4 2
 systray_background_id = 0
 systray_sort = ascending

@@ -1,0 +1,354 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+transparent = #00000000
+background = #2f343f
+foreground = #ebdbb2
+black = #7c6f64
+dgrey = #928374
+dred = #cc241d
+red = #fb4934
+dgreen = #98971a
+green = #b8bb26
+dyellow = #d79921
+yellow = #fabd2f
+dblue = #458588
+blue = #83a598
+dmagenta = #b16286
+magenta = #d3869b
+dcyan = #689d6a
+cyan = #8ec07c
+lgrey = #a89984
+white = #ebdbb2
+
+tblack = #852f343f
+tred = #80fb4934
+tgreen = #80b8bb26
+tyellow = #80fabd2f
+tblue = #8083a598
+tmagenta = #80d3869b
+tcyan = #808ec07c
+twhite = #80ebdbb2
+tgrey = #80a89984
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/bar1]
+monitor = eDP1
+width = 100%
+height = 26
+offset-x = 0
+offset-y = 0
+
+background = ${colors.tblack}
+foreground = ${colors.foreground}
+
+font-0 = FontAwesome:size=10;0
+font-1 = Material Design Icons:size=10
+font-2 = Roboto:size=10:fontformat=truetype
+font-3 = Wuncon Siji:size=10;0
+font-4 = fixed:pixelsize=10
+
+modules-left = i3 files chrome urxvt android-studio xwindow
+modules-center = wifi ethernet memory cpu
+modules-right = backlight volume battery date powermenu
+
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.tblack}
+tray-transparent = false
+
+underline-size = 3
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 2
+
+[bar/bar2]
+inherit = bar/bar1
+monitor = DP1
+tray-position = 
+
+modules-right = backlight volume battery date
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+
+ws-icon-0 = I;"%{T2}%{T-}"
+ws-icon-1 = II;"%{T2}%{T-}"
+
+format = <label-state> <label-mode>
+
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.dyellow}
+label-mode-padding = 2
+
+label-focused = %icon%
+label-focused-foreground = ${colors.yellow}
+label-focused-background = ${colors.tyellow}
+label-focused-underline = ${colors.dyellow}
+label-focused-padding = 2
+
+label-urgent = %icon%
+label-urgent-background = ${colors.tred}
+label-urgent-underline = ${colors.dred}
+label-urgent-padding = 2
+
+label-visible = %icon%
+label-visible-background = ${colors.tblack} 
+label-visible-underline = ${colors.foreground} 
+label-visible-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-background = ${colors.tblack} 
+label-unfocused-underline = ${colors.foreground} 
+label-unfocused-padding = 2
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+format-background = ${colors.tyellow}
+format-underline = ${colors.dyellow}
+format-padding = 2
+label =   %percentage%%
+
+[module/volume]
+type = internal/volume
+format-volume = <ramp-volume> <label-volume>
+
+master-mixer = Master
+
+label-muted =   mute
+label-volume = "%{A3:pavucontrol:}%percentage%%%{A-}"
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+format-volume-underline = ${colors.dgreen}
+format-volume-background = ${colors.tgreen}
+format-volume-padding = 2
+
+format-muted-underline = ${colors.dgreen}
+format-muted-background = ${colors.tgreen}
+format-muted-padding = 2
+
+mapping = true
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = "%{T2}%{T-}  %a %b %d"
+time = "%H:%M"
+label = "%{A1:gsimplecal:}%date%  %time%%{A}"
+format = <label>
+format-underline = ${colors.dcyan} 
+format-padding = 2
+format-background = ${colors.tcyan}
+
+;[module/date]
+;type = internal/date
+;interval = 1.0
+;date = %Y-%m-%d
+;time = %H:%M
+;date-alt = %A, %d %B %Y
+;time-alt = %H:%M:%S
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP0
+full-at = 100
+
+label-full =  %percentage%%
+label-full-font = 2
+format-full = <label-full>
+format-full-underline = ${colors.dblue}
+format-full-padding = 2
+format-full-background = ${colors.tblue}
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.dblue}
+format-charging-padding = 2
+format-charging-background = ${colors.tblue}
+
+label-discharging = %percentage%% (%time%)
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.dblue}
+format-discharging-padding = 2
+format-discharging-background = ${colors.tblue}
+
+ramp-capacity-font = 2
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-10 = 
+
+animation-charging-font = 2
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-framerate = 750
+
+[module/wifi]
+type=internal/network
+interface = wlp2s0
+interval = 3.0
+format-connected = <label-connected>
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+label-connected-font = 2
+label-connected =  %essid% - %local_ip%
+format-connected-background = ${colors.dred}
+format-connected-underline = ${colors.red}
+format-connected-padding = 2
+format-disconnected = 
+
+[module/ethernet]
+type=internal/network
+interface = enp1s0
+interval = 3.0
+format-connected = <label-connected>
+
+label-connected =  %local_ip%
+format-connected-background = ${colors.dred}
+format-connected-underline = ${colors.red}
+format-connected-padding = 2
+format-disconnected = 
+
+[module/memory]
+type=internal/memory
+interval = 3
+format = <label>
+
+label = "  %percentage_used%%"
+
+format-background = ${colors.tcyan}
+format-underline = ${colors.dcyan}
+format-padding = 2
+
+[module/cpu]
+type=internal/cpu
+interval=0.5
+
+format-prefix = "  "
+format-prefix-font = 2
+format = <ramp-coreload>
+format-background = ${colors.tcyan}
+format-underline = ${colors.dcyan}
+format-padding = 2
+
+label = %percentage-cores%
+
+bar-load-width = 10
+bar-load-indicator = │
+bar-load-indicator-foreground = #ff
+bar-load-indicator-font = 2
+bar-load-fill = ─
+bar-load-fill-font = 2
+bar-load-fill-foreground = #9f78e1
+bar-load-empty = ─
+bar-load-empty-font = 2
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+
+ramp-coreload-0-foreground = ${colors.green}
+ramp-coreload-1-foreground = ${colors.dgreen}
+ramp-coreload-2-foreground = ${colors.yellow}
+ramp-coreload-3-foreground = ${colors.dyellow}
+ramp-coreload-4-foreground = ${colors.red}
+ramp-coreload-5-foreground = ${colors.dred}
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+;label-open-foreground = ${colors.secondary}
+label-close = "%{T2}%{T-}"
+;label-close-foreground = ${colors.secondary}
+label-separator = "%{T2}%{T-}"
+;label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = Reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = Power Off
+menu-0-1-exec = menu-open-2
+menu-0-2 = Logout
+menu-0-2-exec = menu-open-3
+
+menu-1-0 =  Cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 =  Reboot
+menu-1-1-exec = systemctl reboot
+
+menu-2-0 = Power Off
+menu-2-0-exec = systemctl poweroff
+menu-2-1 =  Cancel
+menu-2-1-exec = menu-open-0
+
+menu-3-0 =  Cancel
+menu-3-0-exec = menu-open-0
+menu-3-1 = Yes, logout
+menu-3-1-exec = i3-msg exit
+
+[module/files]
+type=custom/text
+content = Files
+click-left = thunar &
+
+[module/chrome]
+type=custom/text
+content = "%{T2}%{T-}"
+click-left = google-chrome-stable &
+
+[module/urxvt]
+type=custom/text
+content = "%{T2}%{T-}"
+click-left = urxvt &
+
+[module/android-studio]
+type=custom/text
+content = "%{T2}%{T-}"
+click-left = android-studio &
+
+; vim:ft=dosini

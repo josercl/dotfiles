@@ -1,0 +1,9 @@
+[ Monitor Externo (VGA) ]
+
+A la Izquierda: --output DP1 --preferred --left-of eDP1
+A la Derecha: --output DP1 --preferred --right-of eDP1
+
+[ Monitor Externo (HDMI) ]
+
+A la Izquierda: --output HDMI1 --preferred --left-of eDP1
+A la Derecha: --output HDMI1 --preferred --right-of eDP1

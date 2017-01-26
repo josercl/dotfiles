@@ -1,0 +1,19 @@
+[user]
+	name = Jose Carrero
+	email = jose@grupoapok.com
+[core]
+	editor = vi
+	excludesfile=~/.gitignore
+	autocrlf = input
+[color]
+	ui = true
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+[web]
+	browser = chromium

@@ -333,7 +333,7 @@ menu-3-1-exec = i3-msg exit
 
 [module/files]
 type=custom/text
-content = Files
+content = "%{T2}%{T-}"
 click-left = thunar &
 
 [module/chrome]
@@ -348,7 +348,34 @@ click-left = urxvt &
 
 [module/android-studio]
 type=custom/text
-content = "%{T2}%{T-}"
+content = "%{T2}%{T-}"
 click-left = android-studio &
+
+[module/android-vm]
+type = custom/menu
+
+label-open = "%{T2}%{T-}"
+label-close = "%{T2} %{T-}"
+label-separator = "%{T2}%{T-}"
+
+menu-4-0 = 4.1.1
+menu-4-0-exec = genymotion-player --vm-name 'Android 4.1.1 - API 16'
+menu-4-1 = 5.0.0
+menu-4-1-exec = genymotion-player --vm-name 'Android 5.0.0 - API 21'
+menu-4-2 = 6.0.0
+menu-4-2-exec = genymotion-player --vm-name 'Android 6.0.0 - API 23'
+menu-4-3 = 7.0.0
+menu-4-3-exec = genymotion-player --vm-name 'Android 7.0.0 - API 24'
+menu-4-4 = "%{T2} %{T-}"
+menu-4-4-exec = menu-open-5
+
+menu-5-0 = 
+menu-5-0-exec = menu-open-4
+menu-5-1 = 4.1.1
+menu-5-1-exec = genymotion-player --vm-name 'Android 4.1.1 - API 16 - Google Play Services'
+menu-5-2 = 5.0.0
+menu-5-2-exec = genymotion-player --vm-name 'Android 5.0.0 - API 21 - Google Play Services'
+menu-5-3 = "6.0.0  %{T2}%{T-}"
+menu-5-3-exec = genymotion-player --vm-name 'Android 6.0.0 - API 23 - Google Play Services'
 
 ; vim:ft=dosini

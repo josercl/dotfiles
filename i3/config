@@ -134,10 +134,10 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
 
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -184,8 +184,9 @@ for_window [class="Pavucontrol"] border normal 5,floating enable
 for_window [class="^Wicd-client.*$"] border normal 5,floating enable
 
 for_window [class="jetbrains-studio" title="^Preview"] move container to workspace $ws2
-for_window [class="Firefox"] move container to workspace $ws2
-for_window [class="Google-chrome"] move container to workspace $ws2
+for_window [class="Firefox"] move container to workspace $ws1
+for_window [class="Google-chrome"] move container to workspace $ws1
+for_window [class="Genymotion Player"] move container to workspace $ws1
 
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -198,6 +199,6 @@ exec setxkbmap -layout latam
 exec nitrogen --restore
 exec xrdb -load ~/.Xresources
 exec_always ~/.config/polybar/launch.sh
-#exec wicd-gtk --tray 
-exec_always nm-applet 
+exec wicd-gtk --tray 
+#exec_always nm-applet 
 exec dropbox

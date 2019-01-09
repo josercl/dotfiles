@@ -42,7 +42,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -124,7 +124,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/bin/pmenu_1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -149,15 +150,19 @@ bindsym $mod+r mode "resize"
 
 mouse_warping none
 
-bindsym $mod+space exec rofi -show drun 
+bindsym $mod+space exec ~/bin/rmenu_1 #rofi -show drun 
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
-bindysm XF86AudioMute exec amixer set master toggle
+bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym XF86Display exec xrandr --auto
+bindsym $mod+p exec ~/bin/screen_setup.sh
+bindsym $mod+l exec i3lock-fancy -p -- scrot
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 #bindsym Ctrl+Mod1+Shift+Right move window workspace next
 #bindsym Ctrl+Mod1+Shift+Left move window workspace prev
@@ -248,11 +253,11 @@ client.unfocused			 #458588 #42534c #ffffff #ff0000   #458588
 client.focused_inactive  #698d6a #47603e #ffffff #ff0000   #689d6a
 
 #exec xrandr --output DP1 --auto --right-of eDP1 --rotate left
-exec xrandr --output DP1 --auto --right-of eDP1
-exec setxkbmap -layout latam
+#exec xrandr --output DP1 --auto --right-of eDP1
+#exec setxkbmap -layout latam
 exec nitrogen --restore
 exec xrdb -load ~/.Xresources
 exec_always ~/.config/polybar/launch.sh
-exec wicd-gtk --tray 
-#exec_always nm-applet 
-exec dropbox
+#exec wicd-gtk --tray 
+exec_always nm-applet 
+exec_always xinput set-prop 11 286 1

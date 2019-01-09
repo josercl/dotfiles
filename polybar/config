@@ -83,6 +83,10 @@ tray-position =
 
 modules-right = backlight volume battery date
 
+[bar/bar3]
+inherit = bar/bar2
+monitor = HDMI1
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
@@ -91,8 +95,8 @@ label = %title:0:30:...%
 type = internal/i3
 strip-wsnumbers = true
 
-ws-icon-0 = I;"%{T2}%{T-}"
-ws-icon-1 = II;"%{T2}%{T-}"
+ws-icon-0 = I;%{T2}%{T-}
+ws-icon-1 = II;%{T2}%{T-}
 
 format = <label-state> <label-mode>
 
@@ -122,8 +126,8 @@ label-unfocused-underline = ${colors.foreground}
 label-unfocused-padding = 2
 
 [module/backlight]
-type = internal/backlight
-card = intel_backlight
+type = internal/xbacklight
+output = eDP1
 format = <label>
 format-background = ${colors.tyellow}
 format-underline = ${colors.dyellow}
@@ -131,7 +135,7 @@ format-padding = 2
 label =   %percentage%%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 format-volume = <ramp-volume> <label-volume>
 
 master-mixer = Master
@@ -174,9 +178,10 @@ format-background = ${colors.tcyan}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
-adapter = ADP0
+battery = BAT1
+adapter = ACAD
 full-at = 100
+poll-interval = 5
 
 label-full =  %percentage%%
 label-full-font = 2
@@ -239,7 +244,7 @@ format-disconnected =
 
 [module/ethernet]
 type=internal/network
-interface = enp1s0
+interface = enp3s0f1
 interval = 3.0
 format-connected = <label-connected>
 
@@ -283,12 +288,14 @@ bar-load-fill-foreground = #9f78e1
 bar-load-empty = ─
 bar-load-empty-font = 2
 
-ramp-coreload-0 = ▁
-ramp-coreload-1 = ▂
-ramp-coreload-2 = ▃
-ramp-coreload-3 = ▄
-ramp-coreload-4 = ▅
-ramp-coreload-5 = ▆
+ramp-coreload-0 = z
+ramp-coreload-1 = a
+ramp-coreload-2 = b
+ramp-coreload-3 = c
+ramp-coreload-4 = d
+ramp-coreload-5 = e
+ramp-coreload-6 = f
+ramp-coreload-7 = g
 
 ramp-coreload-0-foreground = ${colors.green}
 ramp-coreload-1-foreground = ${colors.dgreen}
@@ -296,6 +303,8 @@ ramp-coreload-2-foreground = ${colors.yellow}
 ramp-coreload-3-foreground = ${colors.dyellow}
 ramp-coreload-4-foreground = ${colors.red}
 ramp-coreload-5-foreground = ${colors.dred}
+ramp-coreload-6-foreground = ${colors.dred}
+ramp-coreload-7-foreground = ${colors.dred}
 
 [module/powermenu]
 type = custom/menu
@@ -339,43 +348,16 @@ click-left = thunar &
 [module/chrome]
 type=custom/text
 content = "%{T2}%{T-}"
-click-left = google-chrome-stable &
+click-left = chromium &
 
 [module/urxvt]
 type=custom/text
 content = "%{T2}%{T-}"
-click-left = urxvt &
+click-left = xfce4-terminal &
 
 [module/android-studio]
 type=custom/text
 content = "%{T2}%{T-}"
-click-left = android-studio &
-
-[module/android-vm]
-type = custom/menu
-
-label-open = "%{T2}%{T-}"
-label-close = "%{T2} %{T-}"
-label-separator = "%{T2}%{T-}"
-
-menu-4-0 = 4.1.1
-menu-4-0-exec = genymotion-player --vm-name 'Android 4.1.1 - API 16'
-menu-4-1 = 5.0.0
-menu-4-1-exec = genymotion-player --vm-name 'Android 5.0.0 - API 21'
-menu-4-2 = 6.0.0
-menu-4-2-exec = genymotion-player --vm-name 'Android 6.0.0 - API 23'
-menu-4-3 = 7.0.0
-menu-4-3-exec = genymotion-player --vm-name 'Android 7.0.0 - API 24'
-menu-4-4 = "%{T2} %{T-}"
-menu-4-4-exec = menu-open-5
-
-menu-5-0 = 
-menu-5-0-exec = menu-open-4
-menu-5-1 = 4.1.1
-menu-5-1-exec = genymotion-player --vm-name 'Android 4.1.1 - API 16 - Google Play Services'
-menu-5-2 = 5.0.0
-menu-5-2-exec = genymotion-player --vm-name 'Android 5.0.0 - API 21 - Google Play Services'
-menu-5-3 = "6.0.0  %{T2}%{T-}"
-menu-5-3-exec = genymotion-player --vm-name 'Android 6.0.0 - API 23 - Google Play Services'
+click-left = /home/jose/android-studio-canary/bin/studio.sh &
 
 ; vim:ft=dosini

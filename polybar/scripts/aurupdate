@@ -1,0 +1,12 @@
+#! /bin/bash
+
+
+MENU="$(cower -uq|paste -sd '|'|rofi -sep "|" -dmenu -i -p 'AUR Updates' -location 3 -yoffset 32 -width 25 -hide-scrollbar -line-padding 4 -padding 20 -font "Iosevka Nerd Font 10")"
+
+case "$MENU" in
+	"")
+		;;
+	*)
+		xfce4-terminal --tab -e "/usr/bin/aurman -S $MENU" --title="Updating $MENU"
+		;;
+esac

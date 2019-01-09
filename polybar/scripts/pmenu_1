@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## Created By Aditya Shakya
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -yoffset 32 -width 15 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 -font "Iosevka Nerd Font 10" <<< " Lock| Logout|勒 Reboot| Shutdown")"
+            case "$MENU" in
+                *Lock) i3lock-fancy -p -- scrot;;
+                *Logout) i3-msg exit;;
+                *Reboot) systemctl reboot ;;
+                *Shutdown) systemctl -i poweroff
+            esac

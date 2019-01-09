@@ -53,3 +53,5 @@ ln -s $CFG_DIR/i3 ~/.config/i3 -f
 
 #Configuracion de polybar
 ln -s $CFG_DIR/polybar ~/.config/polybar -f
+chmod 755 $CFG_DIR/polybar/scripts/*
+ln -s $CFG_DIR/polybar/scripts/* ~/bin -f

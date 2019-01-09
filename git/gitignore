@@ -6,7 +6,6 @@ bin/*.*
 *.dex.*
 .project
 .classpath
-.*ignore
 .buildpath
 .settings
 Thumbs.db

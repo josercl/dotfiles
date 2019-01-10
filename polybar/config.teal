@@ -82,6 +82,7 @@ tray-background = ${color.ashade8}
 
 font-0 = "Fantasque Sans Mono:pixelsize=10;3"
 font-1 = "Iosevka Nerd Font:pixelsize=13;3"
+font-2 = "Wuncon Siji:pixelsize=13;3"
 
 ;==========================================================
 
@@ -94,7 +95,7 @@ cursor-scroll = ns-resize
 ;== Module Location ========================================================
 
 modules-left = arch i3 terminal androidstudio chrome intellij phpstorm webstorm vscode
-modules-right = mpd pkg aur backlight volume battery date powermenu 
+modules-right = mpd ethernet wifi backlight volume battery date powermenu 
 
 [bar/second]
 inherit = bar/main
@@ -250,23 +251,10 @@ label-song-ellipsis = true
 
 ;==========================================================
 
-[module/pkg]
-type = custom/script
-exec = ~/bin/updates.sh
-format-background = ${color.shade7}
-format-padding = 2
-tail = true
-click-left = xfce4-terminal --tab -e "sudo pacman -Syu"
-
-[module/aur]
-inherit=module/pkg
-exec = ~/bin/aurupdates.sh
-click-left = ~/bin/aurupdate
-
 [module/battery]
 type = internal/battery
-full-at = 99
-time-format = %h:%M
+full-at = 100
+time-format = %H:%M
 battery = BAT1
 adapter = ACAD
 format-charging = <animation-charging> <label-charging>
@@ -316,6 +304,7 @@ label-volume = "%{A3:pavucontrol:}%percentage%%%{A-}"
 label-muted = "婢"
 label-muted-background = ${color.shade5}
 label-muted-padding = 2
+use-ui-max = false
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -325,14 +314,20 @@ ramp-volume-4 = 墳
 ramp-volume-5 = 墳
 ramp-volume-6 = 墳
 
-[module/network]
-type = custom/script
-exec = ~/bin/check-network
-format-background = ${color.shade3}
-format-padding = 2
-click-left = networkmanager_dmenu &
-click-right = networkmanager_dmenu &
-tail = true
+[module/ethernet]
+type = internal/network
+interface = enps0f1
+label-connected-background = ${color.shade7}
+label-connected-padding = 2
+interval = 3
+
+label-connected =  %local_ip%
+label-disconnected = 
+
+[module/wifi]
+inherit = module/ethernet
+interface = wlp2s0
+label-connected = 直 %essid% %local_ip%
 
 [module/date]
 type = internal/date

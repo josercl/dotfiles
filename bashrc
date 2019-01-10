@@ -49,10 +49,12 @@ alias ls='ls --color=always'
 alias vi='vim'
 
 JAVA_HOME=/usr/lib/jvm/java-default-runtime
-ANDROID_SDK=$HOME/Downloads/android-sdk-linux
+ANDROID_SDK=$HOME/Android/Sdk
 PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/.config/composer/vendor/bin
 
 LS_COLORS="or=00;31:ow=01;44;32:ex=01;33:*.iso=00;34:*.mp3=00;33:*.png=00;35:*.jpg=00;35:*.jpeg=00;35:*.JPG=00;35:*.gif=00;35"
+
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
 export PATH
 export LS_COLORS

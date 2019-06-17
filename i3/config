@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 
 mouse_warping none
 
-bindsym $mod+space exec ~/bin/rmenu_1 #rofi -show drun 
+bindsym $mod+space exec ~/.config/polybar/scripts/launcher.sh #rofi -show drun 
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioNext exec mpc next
@@ -233,13 +233,13 @@ for_window [class="^Wicd-client.*$"] border normal 5,floating enable
 for_window [class="jetbrains-studio" title="^Preview"] move container to workspace $ws2
 for_window [class="Firefox"] move container to workspace $ws1
 for_window [class="Google-chrome"] move container to workspace $ws1
-for_window [class="Genymotion Player"] move container to workspace $ws1
+#for_window [class="Genymotion Player"] move container to workspace $ws1
 
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating disable
 
 for_window [class="^jetbrains"] move container to workspace $ws2
 
-for_window [class="^Genymotion"] move container to workspace $ws2
+#for_window [class="^Genymotion"] move container to workspace $ws2
 
 #class						border  backgr. text	   indicador child_border
 
@@ -254,10 +254,11 @@ client.focused_inactive  #698d6a #47603e #ffffff #ff0000   #689d6a
 
 #exec xrandr --output DP1 --auto --right-of eDP1 --rotate left
 #exec xrandr --output DP1 --auto --right-of eDP1
-#exec setxkbmap -layout latam
+exec setxkbmap -layout latam
 exec nitrogen --restore
 exec xrdb -load ~/.Xresources
 exec_always ~/.config/polybar/launch.sh
 #exec wicd-gtk --tray 
 exec_always nm-applet 
-exec_always xinput set-prop 11 286 1
+exec_always dropbox
+#exec_always xinput set-prop 11 286 1

@@ -62,7 +62,7 @@ blue-gray = #546e7a
 ;==========================================================
 
 [bar/main]
-monitor=eDP1
+monitor=eDP-1
 width = 100%
 height = 32
 ;offset-x = 2%
@@ -181,49 +181,49 @@ type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = android-studio
+click-left = /home/apokdev/android-studio/bin/studio.sh&
 
 [module/terminal]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = xfce4-terminal
+click-left = xfce4-terminal&
 
 [module/chrome]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = google-chrome-stable
+click-left = google-chrome-stable&
 
 [module/intellij]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = intellij-idea-ultimate-edition
+click-left = intellij-idea-ultimate-edition&
 
 [module/phpstorm]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = phpstorm
+click-left = phpstorm&
 
 [module/webstorm]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = webstorm
+click-left = webstorm&
 
 [module/vscode]
 type = custom/text
 content = 
 content-padding = 2
 content-foreground = ${color.fg-alt}
-click-left = code
+click-left = code&
 
 ;==========================================================
 
@@ -256,7 +256,7 @@ type = internal/battery
 full-at = 100
 time-format = %H:%M
 battery = BAT1
-adapter = ACAD
+adapter = ADP1
 format-charging = <animation-charging> <label-charging>
 format-charging-background = ${color.shade4}
 format-charging-padding = 2
@@ -316,7 +316,7 @@ ramp-volume-6 = 墳
 
 [module/ethernet]
 type = internal/network
-interface = enps0f1
+interface = enp3s0
 label-connected-background = ${color.shade7}
 label-connected-padding = 2
 interval = 3
@@ -326,7 +326,7 @@ label-disconnected =
 
 [module/wifi]
 inherit = module/ethernet
-interface = wlp2s0
+interface = wlp4s0
 label-connected = 直 %essid% %local_ip%
 
 [module/date]

@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/apokdev/.config/openbox'
 let g:netrw_dirhist_2='/home/apokdev/public_html/test/.git/hooks'
 let g:netrw_dirhist_3='/home/apokdev/public_html/laguia/app'
 let g:netrw_dirhist_4='/home/apokdev/public_html/laguia/build'
 let g:netrw_dirhist_5='/home/apokdev/Android/Valentina Quintero/LaGuiaAPP/app/build'
+let g:netrw_dirhist_6='/home/jose/Downloads/vobsub2srt-git/vobsub2srt'
+let g:netrw_dirhist_7='/home/jose/Documents/dotfiles/polybar/scripts'

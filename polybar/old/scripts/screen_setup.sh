@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCREENS=$(xrandr | grep "connected"|awk '{print$1}')
-PRIMARY_SCREEN=$(xrandr | grep -E " connected (primary )?[1-9]+" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/")
+PRIMARY_SCREEN=$(xrandr | grep -E " connected (primary )" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/")
 
 DISPLAYS=""
 NDISPLAYS=0

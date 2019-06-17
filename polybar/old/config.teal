@@ -99,7 +99,7 @@ modules-right = mpd ethernet wifi backlight volume battery date powermenu
 
 [bar/second]
 inherit = bar/main
-monitor = VGA-1
+monitor = HDMI1
 modules-left = arch workspaces 
 tray-position = 
  
@@ -266,8 +266,12 @@ format-discharging-background = ${color.shade4}
 format-discharging-padding = 2
 label-discharging = %percentage%% %time%
 format-full = <label-full>
+format-full-background = ${color.shade4}
+format-full-padding = 2
+label-full-background = ${color.shade4}
+label-full-padding = 1
 
-format-full-prefix = " "
+format-full-prefix = ""
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -348,7 +352,7 @@ click-left = ~/bin/pmenu_1
 
 [module/backlight]
 type = internal/xbacklight
-output = eDP-1
+output = eDP1
 enable-scroll = true
 format = <ramp> <label>
 format-padding = 2

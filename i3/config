@@ -117,7 +117,7 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 #bindsym $mod+Shift+9 move container to workspace $ws9
 #bindsym $mod+Shift+0 move container to workspace $ws10
 
-workspace $ws10 output VGA1
+workspace $ws2 output HDMI1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -230,14 +230,14 @@ for_window [window_role="Preferences"] floating enable
 for_window [class="Pavucontrol"] border normal 5,floating enable
 for_window [class="^Wicd-client.*$"] border normal 5,floating enable
 
-for_window [class="jetbrains-studio" title="^Preview"] move container to workspace $ws2
+#for_window [class="jetbrains-studio" title="^Preview"] move container to workspace $ws2
 for_window [class="Firefox"] move container to workspace $ws1
 for_window [class="Google-chrome"] move container to workspace $ws1
 #for_window [class="Genymotion Player"] move container to workspace $ws1
 
 for_window [instance="crx_nckgahadagoaajjgafhacjanaoiihapd"] floating disable
 
-for_window [class="^jetbrains"] move container to workspace $ws2
+#for_window [class="^jetbrains"] move container to workspace $ws2
 
 #for_window [class="^Genymotion"] move container to workspace $ws2
 

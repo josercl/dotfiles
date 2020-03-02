@@ -11,9 +11,11 @@ set $ws7 VII
 set $ws8 VIII
 set $ws9 IX
 
-set $terminal_path /usr/bin/xfce4-terminal
+set $terminal_path /usr/bin/alacritty
 
 floating_modifier $mod
+
+font pango:JetBrains Mono, 10
 
 hide_edge_borders smart
 
@@ -181,7 +183,6 @@ gaps inner 10
 gaps outer 0
 
 for_window [window_type="splash"] floating enable
-
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable

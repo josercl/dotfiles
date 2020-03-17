@@ -49,12 +49,3 @@ Urxvt.resize-font.bigger: C-plus
 ! white
 *color7:        #a89984
 *color15:       #ebdbb2
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #1d2021, #1d2021, #ebdbb2
-rofi.color-normal: #1d2021, #ebdbb2, #1d2021, #8ec07c, #1d2021
-rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
-rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3

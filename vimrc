@@ -5,4 +5,4 @@ set ruler
 set cursorline
 set ts=3
 let g:molokai_original=1
-colorscheme molokai
+colorscheme nord

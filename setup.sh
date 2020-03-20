@@ -21,32 +21,12 @@ ln -s $CFG_DIR/ncmpcpp ~/.ncmpcpp -f
 ln -s $CFG_DIR/vim ~/.vim -f
 ln -s $CFG_DIR/vimrc ~/.vimrc -f
 
-#Configuracion de openbox
-ln -s $CFG_DIR/openbox/ob-randrrc ~/.ob-randrrc -f
-
-#Configuracion de gmrun
-ln -s $CFG_DIR/gmrunrc ~/.gmrunrc -f
-
 #Configuracion "basica" de tmux
 ln -s $CFG_DIR/tmux.conf ~/.tmux.conf -f
 
 if [ ! -d ~/.config ];then
 mkdir ~/.config;
 fi 
-
-#Configuracion de openbox
-ln -s $CFG_DIR/openbox ~/.config/openbox -f
-
-#Configuracion de tint2
-ln -s $CFG_DIR/tint2 ~/.config/tint2 -f
-
-#Tema reNIX de openbox
-if [ ! -d ~/.themes/reNIX ];then
-mkdir -p ~/.themes/reNIX
-fi
-
-ln -s $CFG_DIR/themes/reNIX/openbox-3 ~/.themes/reNIX/openbox-3 -f
-ln -s $CFG_DIR/themes/reNIX-ACID ~/.themes/reNIX-ACID -f
 
 #Configuracion de i3
 ln -s $CFG_DIR/i3 ~/.config/i3 -f

@@ -31,3 +31,4 @@ node_modules
 bower_components
 .DS_STORE
 local.properties
+vendor

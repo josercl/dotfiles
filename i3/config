@@ -223,11 +223,11 @@ client.urgent           $urgent.color.border               $urgent.color.backgro
 
 exec_always xrandr --output VGA-1 --auto --left-of eDP-1 
 exec_always xrandr --output HDMI-1-1 --auto --right-of eDP-1
-exec setxkbmap -layout latam
+exec setxkbmap -layout us_intl
 exec nitrogen --restore
 exec xrdb -load ~/.Xresources
 exec_always ~/.config/polybar/launch.sh
 exec_always nm-applet 
-exec_always dropbox
+i#exec_always dropbox
 exec_always slack
 #exec_always xinput set-prop 11 286 1

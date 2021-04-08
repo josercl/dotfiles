@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-function get${1/(\w*)/\u$1/g}(){return \$this->$1;}
-function set${1/(\w*)/\u$1/g}(\$$1){\$this->$1=\$$1;}
-]]></content>
-	<tabTrigger>getset</tabTrigger>
-	<scope>source.php</scope>
-</snippet>

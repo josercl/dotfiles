@@ -28,8 +28,5 @@ ln -sfn $CFG_DIR/i3 ~/.config/i3
 ln -sfn $CFG_DIR/alacritty/alacritty-gruvbox-dark-soft.yml ~/.alacritty.yml
 
 #Configuracion de polybar
-cd polybar
-git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
 ln -sfn $CFG_DIR/polybar ~/.config/polybar
-chmod 755 $CFG_DIR/polybar/scripts/*
-ln -sfn $CFG_DIR/polybar/scripts/* ~/bin
+chmod +x $CFG_DIR/polybar/scripts/*

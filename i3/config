@@ -24,7 +24,7 @@ bindsym $mod+Return exec $terminal_path
 bindsym $mod+Shift+q kill
 bindcode Mod1+70 kill
 
-bindsym $mod+space exec ~/.config/polybar/shapes/scripts/launcher.sh
+bindsym $mod+space exec ~/.config/polybar/scripts/launcher.sh
 
 # change focus
 bindsym $mod+Left focus left
@@ -106,7 +106,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "~/.config/polybar/shapes/scripts/powermenu.sh"  
+bindsym $mod+Shift+e exec "~/.config/polybar/scripts/powermenu.sh"  
 # "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #bindsym $mod+Shift+e exec ~/bin/pmenu_1
@@ -255,7 +255,7 @@ exec_always xrandr --output HDMI-1-1 --auto --right-of eDP-1
 exec setxkbmap -layout us_intl
 exec nitrogen --restore
 exec xrdb -load ~/.Xresources
-exec_always ~/.config/polybar/launch.sh --shapes
+exec_always ~/.config/polybar/launch.sh 
 exec_always nm-applet 
 #exec_always dropbox
 exec_always slack

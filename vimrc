@@ -4,5 +4,6 @@ set laststatus=2
 set ruler
 set cursorline
 set ts=3
-let g:molokai_original=1
-colorscheme nord
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_underline = 0
+colorscheme gruvbox 

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+COLOR_NONE="\033[0m"  # unsets color to term's fg color                                                      
+
+COLOR_GREEN="\033[0;32m"
+COLOR_YELLOW="\033[0;33m"
+COLOR_CYAN="\033[0;36m"
+
+CONFIG_HOME=~/.config/JetBrains
+
+echo -e "${COLOR_YELLOW}Elige el IDE:${COLOR_NONE}"
+echo
+ide_options=("IntelliJIdea" "PhpStorm" "WebStorm" "DataGrip")
+
+select IDE in "${ide_options[@]}"
+do
+	break
+done
+
+[ $IDE == "IntelliJIdea" ] && IDE_LOWER="idea"
+[ $IDE == "PhpStorm" ] && IDE_LOWER="phpstorm"
+[ $IDE == "WebStorm" ] && IDE_LOWER="webstorm"
+[ $IDE == "DataGrip" ] && IDE_LOWER="datagrip"
+
+
+versions=($(cd ${CONFIG_HOME} && for i in `ls --color=never -d $IDE*`;do echo $i|sed s/$IDE//;done))
+
+echo 
+echo -e "${COLOR_YELLOW}Elige la version para $IDE:${COLOR_NONE}"
+select VERSION in "${versions[@]}"
+do
+	[ "$VERSION" != "" ] && break
+done
+
+IDE_CONFIG_HOME=$CONFIG_HOME/$IDE$VERSION
+
+echo 
+echo -e "${COLOR_CYAN}Reseteando...${COLOR_NONE}"
+
+rm -rf $IDE_CONFIG_HOME/eval
+rm -rf $IDE_CONFIG_HOME/options/other.xml
+rm -rf ~/.java/.userPrefs/jetbrains/$IDE_LOWER
+
+echo -e "${COLOR_GREEN}Listo!!${COLOR_NONE}"

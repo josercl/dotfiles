@@ -59,3 +59,7 @@ export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 export PATH
 export LS_COLORS
 export EDITOR=vi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -25,8 +25,8 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px;
-	border-color:					@ac;
+	border:							4px;
+	border-color:					@bg2;
     border-radius:                  12px;
 	width:							300px;
     location:                       center;
@@ -89,7 +89,7 @@ mainbox {
     background-color:               @al;
 	border:							0px;
     border-radius:                  0px;
-	border-color:					@bg4;
+	border-color:					#00ff00;
     children:                       [ inputbar, listview ];
     spacing:                       	0px;
     padding:                        0px;
@@ -113,6 +113,8 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0.5;
     margin:                         0px 2.5px 0px 2.5px;
+    background-color:               @al;
+    text-color:                     @fg;
 }
 
 element selected {

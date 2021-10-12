@@ -50,16 +50,15 @@ alias vi='vim'
 
 JAVA_HOME=/usr/lib/jvm/java-default-runtime
 ANDROID_SDK=$HOME/Android/Sdk
-PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/.config/composer/vendor/bin
+PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/.config/composer/vendor/bin:$HOME/.npm-global/bin
 
 LS_COLORS="or=00;31:ow=01;44;32:ex=01;33:*.iso=00;34:*.mp3=00;33:*.png=00;35:*.jpg=00;35:*.jpeg=00;35:*.JPG=00;35:*.gif=00;35"
 
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
+export PHONE=0A211JEC217391
+
 export PATH
 export LS_COLORS
 export EDITOR=vi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh

@@ -18,7 +18,7 @@ floating_modifier $mod
 
 font pango:JetBrains Mono, 10
 
-hide_edge_borders smart
+# hide_edge_borders smart
 
 bindsym $mod+Return exec $terminal_path
 
@@ -90,8 +90,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
 
-set $laptop eDP-1
-set $monitor_right HDMI-1-1
+set $laptop eDP-1-1
+set $monitor_right HDMI-0
 
 workspace $ws1 output $laptop
 workspace $ws2 output $laptop
@@ -145,7 +145,10 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym $mod+p exec ~/bin/screen_setup.sh
+bindsym XF86Calculator exec /usr/bin/qalculate-gtk
+bindsym XF86Tools exec /usr/bin/alacritty -e ~/bin/musica
+bindsym XF86HomePage exec /usr/bin/google-chrome-stable
+# bindsym $mod+p exec ~/bin/screen_setup.sh
 bindsym $mod+l exec i3lock --color=000000
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -193,18 +196,19 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-smart_gaps on
-
-gaps inner 10
+gaps inner 15 
 gaps outer 0
+
+for_window [class="^.*"] border pixel 4
 
 for_window [window_type="splash"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
-
+for_window [class="Qalculate-gtk"] floating enable
 for_window [class="Pavucontrol"] border normal 5,floating enable
+for_window [class="Bitwarden"] floating enable
 
 for_window [class="Google-chrome"] move container to workspace $ws2
 for_window [title="Google Chrome"] move container to workspace $ws2
@@ -215,39 +219,41 @@ for_window [class="jetbrains-studio"] move container to workspace $ws6
 for_window [class="jetbrains-webstorm"] move container to workspace $ws5
 for_window [class="jetbrains-idea"] move container to workspace $ws7
 for_window [title="DBeaver"] move container to workspace $ws8
-for_window [class="code-oss"] move container to workspace $ws9
 
 for_window [class="Slack"] move container to workspace $ws3
 for_window [class="^Microsoft Teams"] move container to workspace $ws3
 for_window [class="^zoom"] move container to workspace $ws3
+for_window [class="TelegramDesktop"] move container to workspace $ws3
+for_window [class="TelegramDesktop"] floating disable
 
 # for_window [class="Alacritty"] move container to workspace $ws1
 # for_window [class="Xfce4-terminal"] move container to workspace $ws1
 
 for_window [title="^Logcat"] move container to workspace $ws0
+for_window [title="^Android Emulator"] floating enable
 
-set $focused.color.border "#002b36"
-set $focused.color.background "#586e75"
-set $focused.color.text "#fdf6e3"
-set $focused.color.indicator "#268bd2"
+set $focused.color.border "#7c6f64"
+set $focused.color.background "#7c6f64"
+set $focused.color.text "#ebdbb2"
+set $focused.color.indicator "#7c6f64"
 set $focused.color.child_border
 
-set $focused_inactive.color.border "#002b36"
-set $focused_inactive.color.background "#073642"
-set $focused_inactive.color.text "#839496"
-set $focused_inactive.color.indicator "#073642"
+set $focused_inactive.color.border "#3c3836"
+set $focused_inactive.color.background "#3c3836"
+set $focused_inactive.color.text "#ebdbb2"
+set $focused_inactive.color.indicator "#3c3836"
 set $focused_inactive.color.child_border
 
-set $unfocused.color.border "#002b36"
-set $unfocused.color.background "#073642"
-set $unfocused.color.text "#839496"
-set $unfocused.color.indicator "#073642"
+set $unfocused.color.border "#282828"
+set $unfocused.color.background "#282828"
+set $unfocused.color.text "#ebdbb2"
+set $unfocused.color.indicator "#282828"
 set $unfocused.color.child_border
 
-set $urgent.color.border "#002b36"
-set $urgent.color.background "#dc322f"
-set $urgent.color.text "#fdf6e3"
-set $urgent.color.indicator "#002b36"
+set $urgent.color.border "#cc241d"
+set $urgent.color.background "#cc241d"
+set $urgent.color.text "#ebdbb2"
+set $urgent.color.indicator "#cc241d"
 set $urgent.color.child_border
 
 # Window Border color
@@ -257,11 +263,7 @@ client.focused_inactive $focused_inactive.color.border     $focused_inactive.col
 client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
 client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
 
-exec_always xrandr --output eDP-1 --primary
-exec_always xrandr --output VGA-1 --auto --left-of eDP-1 
-exec_always xrandr --output HDMI-1-1 --auto --right-of eDP-1
 exec setxkbmap -layout us_intl
-exec nitrogen --restore
 exec xrdb -load ~/.Xresources
 exec_always ~/.config/polybar/launch.sh 
 exec_always nm-applet 
@@ -269,4 +271,7 @@ exec_always nm-applet
 exec_always slack
 exec_always /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec_always /usr/bin/blueman-applet
-#exec_always xinput set-prop 11 286 1
+exec_always xinput set-prop 16 332 1
+exec_always xrandr --output eDP-1-1 --primary --auto
+exec_always xrandr --output HDMI-0 --auto --right-of eDP-1-1
+exec nitrogen --restore

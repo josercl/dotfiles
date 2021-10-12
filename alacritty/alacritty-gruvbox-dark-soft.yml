@@ -5,7 +5,7 @@ font:
   bold:
     family: Jetbrains Mono
     style: Medium
-  size: 9 
+  size: 8
   
 # Base16 Gruvbox dark, soft - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)

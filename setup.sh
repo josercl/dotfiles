@@ -30,3 +30,5 @@ ln -sfn $CFG_DIR/alacritty/alacritty-gruvbox-dark-soft.yml ~/.alacritty.yml
 #Configuracion de polybar
 ln -sfn $CFG_DIR/polybar ~/.config/polybar
 chmod +x $CFG_DIR/polybar/scripts/*
+
+ln -sfn $CFG_DIR/rofi ~/.config/rofi

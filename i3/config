@@ -1,18 +1,22 @@
 set $mod Mod4
 set $alt Mod1
 
-set $ws1 "1:Terminal"
-set $ws2 "2:Web"
-set $ws3 "3:Comm"
-set $ws4 "4:PHP"
-set $ws5 "5:WebDev"
-set $ws6 "6:Android"
-set $ws7 "7:Java"
-set $ws8 "8:DB"
-set $ws9 "9:IX"
-set $ws0 "10:X"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "10"
 
-set $terminal_path /usr/bin/alacritty -e tmux
+set $terminal_bin /usr/bin/xfce4-terminal
+set $browser_bin /usr/bin/firefox
+set $calculator_bin /usr/bin/qalculate-gtk
+
+# set $terminal_path
 
 floating_modifier $mod
 
@@ -20,12 +24,14 @@ font pango:JetBrains Mono, 10
 
 # hide_edge_borders smart
 
-bindsym $mod+Return exec $terminal_path
+bindsym $mod+Return exec $terminal_bin -e tmux
 
 bindsym $mod+Shift+q kill
 bindcode Mod1+70 kill
 
 bindsym $mod+space exec ~/.config/polybar/scripts/launcher.sh
+
+bindsym $mod+x move container to output $monitor $laptop
 
 # change focus
 bindsym $mod+Left focus left
@@ -91,26 +97,25 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
 
 set $laptop eDP-1-1
-set $monitor_right HDMI-0
+set $monitor HDMI-0
 
-workspace $ws1 output $laptop
+workspace $ws1 output $monitor
 workspace $ws2 output $laptop
 workspace $ws3 output $laptop
+workspace $ws4 output $monitor $laptop
+workspace $ws5 output $monitor $laptop
+workspace $ws6 output $monitor $laptop
+workspace $ws7 output $monitor $laptop
+workspace $ws8 output $laptop
+workspace $ws9 output $laptop
 workspace $ws0 output $laptop
-
-workspace $ws4 output $monitor_right
-workspace $ws5 output $monitor_right
-workspace $ws6 output $monitor_right
-workspace $ws7 output $monitor_right
-workspace $ws8 output $monitor_right
-workspace $ws9 output $monitor_right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "~/.config/polybar/scripts/powermenu.sh"  
+bindsym $mod+Shift+e exec "~/.config/polybar/scripts/powermenu.sh"
 # "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #bindsym $mod+Shift+e exec ~/bin/pmenu_1
@@ -145,9 +150,9 @@ bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym XF86Calculator exec /usr/bin/qalculate-gtk
-bindsym XF86Tools exec /usr/bin/alacritty -e ~/bin/musica
-bindsym XF86HomePage exec /usr/bin/google-chrome-stable
+bindsym XF86Calculator exec $calculator_bin
+bindsym XF86Tools exec $terminal_bin -e ~/bin/musica
+bindsym XF86HomePage exec $browser_bin
 bindsym $mod+p exec ~/bin/screen_setup.sh
 bindsym $mod+l exec i3lock --color=000000
 
@@ -195,10 +200,12 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-gaps inner 15 
+gaps inner 15
 gaps outer 0
 
 for_window [class="^.*"] border pixel 4
+
+for_window [class="Ankama Launcher"] floating enable
 
 for_window [window_type="splash"] floating enable
 for_window [window_role="pop-up"] floating enable
@@ -265,13 +272,13 @@ client.urgent           $urgent.color.border               $urgent.color.backgro
 
 exec setxkbmap -layout us_intl
 exec xrdb -load ~/.Xresources
-exec_always ~/.config/polybar/launch.sh 
-exec_always nm-applet 
+exec_always ~/.config/polybar/launch.sh
+exec_always nm-applet
 #exec_always dropbox
 exec_always slack
 exec_always /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec_always /usr/bin/blueman-applet
 exec_always ~/bin/enable_touchpad_i3.sh
-exec_always xrandr --output eDP-1-1 --primary --auto
-exec_always xrandr --output HDMI-0 --auto --right-of eDP-1-1
+exec_always xrandr --output $laptop --primary --auto
+exec_always xrandr --output $monitor --auto --left-of $laptop
 exec nitrogen --restore

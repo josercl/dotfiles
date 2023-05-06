@@ -7,4 +7,5 @@ set ts=3
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_underline = 0
-colorscheme gruvbox 
+set termguicolors
+colorscheme monokai

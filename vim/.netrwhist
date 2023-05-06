@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/apokdev/.config/i3'
+let g:netrw_dirhist_8='/home/apokdev/Apok/Rentik/contract'
+let g:netrw_dirhist_7='/home/apokdev/Apok/Rentik'
+let g:netrw_dirhist_6='/home/apokdev/Apok'
+let g:netrw_dirhist_5='/home/apokdev'
+let g:netrw_dirhist_4='/home'
+let g:netrw_dirhist_3='/home/apokdev/Documents/dotfiles/polybar'
+let g:netrw_dirhist_2='/home/apokdev/Documents/dotfiles/i3'
 let g:netrw_dirhist_1='/home/apokdev/.local/share/applications'

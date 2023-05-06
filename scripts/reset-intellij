@@ -10,7 +10,7 @@ CONFIG_HOME=~/.config/JetBrains
 
 echo -e "${COLOR_YELLOW}Elige el IDE:${COLOR_NONE}"
 echo
-ide_options=("IntelliJIdea" "PhpStorm" "WebStorm" "DataGrip")
+ide_options=("IntelliJIdea" "PhpStorm" "WebStorm" "DataGrip" "PyCharm")
 
 select IDE in "${ide_options[@]}"
 do
@@ -21,6 +21,7 @@ done
 [ $IDE == "PhpStorm" ] && IDE_LOWER="phpstorm"
 [ $IDE == "WebStorm" ] && IDE_LOWER="webstorm"
 [ $IDE == "DataGrip" ] && IDE_LOWER="datagrip"
+[ $IDE == "PyCcharm"  ] && IDE_LOWER="pycharm"
 
 
 versions=($(cd ${CONFIG_HOME} && for i in `ls --color=never -d $IDE*`;do echo $i|sed s/$IDE//;done))

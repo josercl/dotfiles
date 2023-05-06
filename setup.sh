@@ -32,3 +32,5 @@ ln -sfn $CFG_DIR/polybar ~/.config/polybar
 chmod +x $CFG_DIR/polybar/scripts/*
 
 ln -sfn $CFG_DIR/rofi ~/.config/rofi
+ln -sfn $CFG_DIR/kitty ~/.config/kitty
+

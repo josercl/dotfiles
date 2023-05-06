@@ -46,7 +46,7 @@ GIT='$(__git_ps1)'
 export PS1="${COLOR_GREEN_BOLD}\u@\h ${COLOR_BLUE_BOLD}\w${COLOR_YELLOW_BOLD}${GIT}${COLOR_GREEN_BOLD} \$${COLOR_NONE} "
 
 alias ls='ls --color=always'
-alias vi='vim'
+alias neofetch='neowofetch'
 
 JAVA_HOME=/usr/lib/jvm/java-default-runtime
 ANDROID_SDK=$HOME/Android/Sdk
@@ -60,5 +60,6 @@ export PHONE=0A211JEC217391
 
 export PATH
 export LS_COLORS
-export EDITOR=vi
+export EDITOR=vim
 source /usr/share/nvm/init-nvm.sh
+

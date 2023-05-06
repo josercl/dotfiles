@@ -2,7 +2,7 @@
 	name = Jose Carrero
 	email = josercl@gmail.com
 [core]
-	editor = vi
+	editor = vim
 	excludesfile=~/.gitignore
 	autocrlf = input
 [color]
@@ -17,3 +17,9 @@
 	ci = commit
 [web]
 	browser = chromium
+[safe]
+	directory = /opt/flutter
+	directory = /opt/flutter3.3.10
+	directory = /opt/flutter3.7.3
+#[credential]
+#	helper = /usr/lib/git-core/git-credential-gnome-keyring

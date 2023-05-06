@@ -15,11 +15,11 @@ do
 			DISPLAYS="$DISPLAYS|"
 		fi
 		DISPLAYS="$DISPLAYS$display to the Right"
-		DISPLAYS="$DISPLAYS|$display to the Left"	
+		DISPLAYS="$DISPLAYS|$display to the Left"
 	fi
 done
 
-RESPONSE="$(rofi -no-lazy-grab -dmenu -p 'Monitor Configuration' -lines $NDISPLAYS -width 15 -hide-scrollbar -location 0 -theme ~/.config/polybar/scripts/rofi/launcher.rasi -sep '|' <<< $DISPLAYS)"
+RESPONSE="$(rofi -no-lazy-grab -dmenu -p 'Monitor Configuration' -lines $NDISPLAYS -hide-scrollbar -location 0 -theme ~/.config/rofi/launchers/type-1/style-5.rasi -sep '|' <<< $DISPLAYS)"
 
 SIDE=$(echo $RESPONSE|cut -d " " -f4|tr [:upper:] [:lower:])
 OUTPUT=$(echo $RESPONSE|cut -d " " -f1)

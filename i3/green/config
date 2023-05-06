@@ -1,0 +1,227 @@
+set $mod Mod4
+set $alt Mod1
+
+set $laptop eDP-1-1
+set $monitor_sceptre HDMI-0
+set $monitor_acer DP-2
+
+set $terminal_bin /usr/bin/kitty  #/usr/bin/xfce4-terminal
+set $browser_bin /usr/bin/firefox
+set $calculator_bin /usr/bin/qalculate-gtk
+
+set $smart_borders off
+
+# set some nice colors      border     background  text
+client.focused              #cffc49    #cffc49     #15171a  #cffc49
+client.unfocused            #15171a    #15171a     #cffc49  #15171a
+client.focused_inactive     #15171a    #15171a     #cffc49  #15171a
+
+gaps inner 10
+gaps outer 0
+gaps top 0
+
+for_window [class="^.*"] border pixel 0
+default_border pixel 0
+default_floating_border pixel 0
+
+# font pango:monospace 8
+font pango:Jetbrains Mono 8
+
+floating_modifier $alt
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +50
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 50-
+bindsym Print exec xfce4-screenshooter
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86Calculator exec $calculator_bin
+bindsym XF86Tools exec $terminal_bin -e ~/bin/musica
+bindsym XF86HomePage exec $browser_bin
+bindsym $mod+p exec ~/bin/screen_setup.sh
+bindsym $mod+l exec i3lock --color=000000
+
+bindsym $mod+Return exec $terminal_bin # -e tmux
+bindsym $mod+Shift+q kill
+bindcode $alt+70 kill
+
+bindsym $mod+space exec ~/.config/polybar/scripts/launcher.sh
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Tab focus next
+bindsym $mod+q focus prev
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+# bindsym Mod1+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "I"
+set $ws2 "II"
+set $ws3 "III"
+set $ws4 "IV"
+set $ws5 "V"
+set $ws6 "VI"
+set $ws7 "VII"
+set $ws8 "VIII"
+set $ws9 "IX"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+
+workspace $ws1 output $monitor_acer
+workspace $ws2 output $monitor_acer
+workspace $ws3 output $monitor_acer
+workspace $ws4 output $monitor_sceptre
+workspace $ws5 output $monitor_sceptre
+workspace $ws6 output $monitor_sceptre
+workspace $ws7 output $laptop
+workspace $ws8 output $laptop
+workspace $ws9 output $laptop
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "~/.config/polybar/scripts/powermenu.sh"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or Mod1+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Mod1+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+mouse_warping none
+
+focus_follows_mouse no
+
+for_window [class="^.*"] border pixel 4
+
+for_window [class="Ankama Launcher"] floating enable
+for_window [class="Rofi"] floating enable
+
+for_window [class="Xfce4-notifyd"] border pixel 0
+
+for_window [window_type="splash"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [class="Qalculate-gtk"] floating enable
+for_window [class="Pavucontrol"] border normal 4,floating enable
+for_window [class="Bitwarden"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+
+for_window [class="Google-chrome"] move container to workspace $ws2
+for_window [title="Google Chrome"] move container to workspace $ws2
+for_window [class="firefox"] move container to workspace $ws1
+
+for_window [class="jetbrains-phpstorm"] move container to workspace $ws6
+for_window [class="jetbrains-studio"] move container to workspace $ws4
+for_window [class="jetbrains-webstorm"] move container to workspace $ws5
+for_window [class="jetbrains-idea"] move container to workspace $ws4
+for_window [class="jetbrains-idea-ce"] move container to workspace $ws4
+for_window [title="DBeaver"] move container to workspace $ws8
+
+for_window [class="Slack"] move container to workspace $ws7
+for_window [class="^Microsoft Teams"] move container to workspace $ws7
+for_window [class="^zoom"] move container to workspace $ws7
+for_window [class="TelegramDesktop"] move container to workspace $ws7
+for_window [class="TelegramDesktop"] floating disable
+
+for_window [title="^Logcat"] move container to workspace $ws9
+for_window [title="^Android Emulator"] floating enable
+
+
+exec_always nitrogen --restore
+exec --no-startup-id dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+# exec --no-startup-id picom
+# exec --no-startup-id $HOME/.config/i3/HDMI-launcher
+# exec --no-startup-id dunst -config $HOME/.config/dunstrc &>/dev/null
+
+exec_always $HOME/.config/polybar/launch.sh
+exec_always setxkbmap -layout us_intl
+exec_always xrandr --output $monitor_sceptre --primary --auto
+exec_always xrandr --output $laptop --auto --right-of $monitor_sceptre
+exec_always xrandr --output $monitor_acer --auto --left-of $monitor_sceptre
+exec_always ~/bin/enable_touchpad_i3.sh
+exec_always /usr/bin/slack
+exec_always /usr/bin/teams
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet

@@ -3,7 +3,7 @@
 	email = josercl@gmail.com
 [core]
 	editor = vim
-	excludesfile=~/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
 [color]
 	ui = true
@@ -16,10 +16,4 @@
 	co = checkout
 	ci = commit
 [web]
-	browser = chromium
-[safe]
-	directory = /opt/flutter
-	directory = /opt/flutter3.3.10
-	directory = /opt/flutter3.7.3
-#[credential]
-#	helper = /usr/lib/git-core/git-credential-gnome-keyring
+	browser = firefox

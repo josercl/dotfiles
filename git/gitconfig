@@ -15,5 +15,8 @@
 	st = status
 	co = checkout
 	ci = commit
+	lol = log --oneline --graph
+	pr = pull --rebase
+	pnr = pull --no-rebase
 [web]
 	browser = firefox

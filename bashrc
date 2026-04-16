@@ -51,8 +51,8 @@ alias vi='nvim'
 alias vim='nvim'
 
 JAVA_HOME=/usr/lib/jvm/java-default-runtime
-ANDROID_SDK=$HOME/Android/Sdk
-PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/.config/composer/vendor/bin:$HOME/.npm-global/bin:/usr/local/bin
+ANDROID_HOME=$HOME/Android/Sdk
+PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$HOME/.config/composer/vendor/bin:$HOME/.npm-global/bin:/usr/local/bin:$HOME/.local/bin
 
 LS_COLORS="or=00;31:ow=01;44;32:ex=01;33:*.iso=00;34:*.mp3=00;33:*.png=00;35:*.jpg=00;35:*.jpeg=00;35:*.JPG=00;35:*.gif=00;35"
 
@@ -70,3 +70,9 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/custom.toml)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/apokdev/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/home/apokdev/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/apokdev/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/home/apokdev/Downloads/google-cloud-sdk/completion.bash.inc'; fi

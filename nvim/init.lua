@@ -1,3 +1,23 @@
-vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
+require('config.init')
+require('config.diagnostics')
 
-vim.cmd.colorscheme "catppuccin-macchiato"
+require('plugins.init')
+-- require('plugins.guess-indent')
+-- require('plugins.devicons')
+-- require('plugins.gitsigns')
+-- require('plugins.which-key')
+-- require('plugins.colorscheme')
+-- require('plugins.todo-comments')
+-- require('plugins.mini')
+-- require('plugins.telescope')
+-- require('plugins.lsp')
+-- require('plugins.formatter')
+-- require('plugins.completion')
+-- require('plugins.treesitter')
+-- require('plugins.indent_line')
+-- require('plugins.neo-tree')
+-- require('plugins.autopairs')
+-- require('plugins.debug')
+-- require('plugins.lint')
+
+-- vim: ts=2 sts=2 sw=2 et

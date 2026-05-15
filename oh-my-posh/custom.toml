@@ -1,0 +1,56 @@
+version = 3
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    template = ' {{ .UserName }} on'
+    foreground = 'green'
+    type = 'session'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '  {{ .Path }} '
+    foreground = 'blue'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      folder_separator_icon = '/'
+      style = 'full'
+
+  [[blocks.segments]]
+    template = '{{ .UpstreamIcon }} {{ .HEAD }} {{ if gt .StashCount 0 }}   {{ .StashCount }} {{ end }} '
+    foreground = 'cyan'
+    powerline_symbol = ''
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      fetch_stash_count = true
+      fetch_upstream_icon = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    type = 'node'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = '#cd5e42'
+    type = 'root'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '# '
+    foreground = 'red'
+    type = 'text'
+    style = 'plain'

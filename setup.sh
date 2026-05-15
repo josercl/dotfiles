@@ -14,8 +14,7 @@ ln -sfn $CFG_DIR/mpd ~/.mpd
 ln -sfn $CFG_DIR/ncmpcpp ~/.ncmpcpp
 
 #Configuracion de vi con perfil de colores y plugins
-ln -sfn $CFG_DIR/vim ~/.vim
-ln -sfn $CFG_DIR/vimrc ~/.vimrc
+ln -sfn $CFG_DIR/nvim ~/.config/nvim
 
 #Configuracion "basica" de tmux
 ln -sfn $CFG_DIR/tmux.conf ~/.tmux.conf

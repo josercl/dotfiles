@@ -46,7 +46,6 @@ GIT='$(__git_ps1)'
 export PS1="${COLOR_GREEN_BOLD}\u@\h ${COLOR_BLUE_BOLD}\w${COLOR_YELLOW_BOLD}${GIT}${COLOR_GREEN_BOLD} \$${COLOR_NONE} "
 
 alias ls='ls --color=always'
-alias neofetch='neowofetch'
 alias vi='nvim'
 alias vim='nvim'
 
@@ -57,7 +56,6 @@ PATH=$PATH:$HOME/bin:$HOME/bin/phptools:$ANDROID_HOME/platform-tools:$ANDROID_HO
 LS_COLORS="or=00;31:ow=01;44;32:ex=01;33:*.iso=00;34:*.mp3=00;33:*.png=00;35:*.jpg=00;35:*.jpeg=00;35:*.JPG=00;35:*.gif=00;35"
 
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
-export XMODIFIERS=
 
 export PATH
 export LS_COLORS

@@ -1,1 +1,0 @@
-catppuccin/colors/catppuccin_latte.vim

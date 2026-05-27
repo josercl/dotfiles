@@ -5,6 +5,9 @@ require('fidget').setup {}
 
 ---@type table<string, vim.lsp.Config>
 local servers = {
+  phpactor = {},
+  oxlint = {},
+  oxfmt = {},
   djls = {},
   djlsp = {},
   jdtls = {},

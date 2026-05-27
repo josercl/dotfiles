@@ -12,10 +12,10 @@ require('blink.cmp').setup {
     nerd_font_variant = 'mono',
   },
   completion = {
-    documentation = { auto_show = false, auto_show_delay_ms = 500 },
+    documentation = { auto_show = false, auto_show_delay_ms = 500, treesitter_highlighting = true },
   },
   sources = {
-    default = { 'lsp', 'path', 'snippets' },
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
   },
   snippets = { preset = 'luasnip' },
   fuzzy = { implementation = 'lua' },

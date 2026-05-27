@@ -2,7 +2,7 @@ local gh = require('utils').gh
 
 vim.pack.add { { src = gh 'nvim-treesitter/nvim-treesitter', version = 'main' } }
 
-local parse rs = {
+local parsers = {
   'bash',
   'c',
   'diff',

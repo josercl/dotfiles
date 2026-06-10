@@ -16,7 +16,7 @@ vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = 'yes:1'
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.splitright = true
@@ -27,6 +27,15 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
+vim.o.colorcolumn = '100'
+vim.o.swapfile = false
+
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.smartindent = true
+vim.o.expandtab = true
+
+vim.o.termguicolors = true
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -45,4 +54,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function() vim.hl.on_yank() end,
 })
 
-vim.o.termguicolors = true

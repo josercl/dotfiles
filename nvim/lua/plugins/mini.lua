@@ -10,6 +10,12 @@ require('mini.ai').setup {
   n_lines = 500,
 }
 
+require('mini.notify').setup({
+  lsp_progress = {
+    duration_last = 750,
+  }
+})
+
 require('mini.surround').setup()
 
 local statusline = require 'mini.statusline'

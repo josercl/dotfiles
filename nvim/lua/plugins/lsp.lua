@@ -1,10 +1,10 @@
 local gh = require('utils').gh
-
 vim.pack.add { gh 'j-hui/fidget.nvim' }
 require('fidget').setup {}
 
 ---@type table<string, vim.lsp.Config>
 local servers = {
+  rust_analyzer = {},
   phpactor = {},
   oxlint = {},
   oxfmt = {},
@@ -15,7 +15,7 @@ local servers = {
     json = {
       format = { enable = true },
       validate = { enable = true },
-    }
+    },
   },
   pyright = {},
   ts_ls = {
@@ -94,7 +94,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
     end
 
-    map('grn', vim.lsp.buf.rename, '[R]e[n]ame', {'n'})
+    map('grn', vim.lsp.buf.rename, '[R]e[n]ame', { 'n' })
     map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
     map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 

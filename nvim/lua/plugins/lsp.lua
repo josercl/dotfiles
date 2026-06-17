@@ -10,7 +10,6 @@ local servers = {
   oxfmt = {},
   djls = {},
   djlsp = {},
-  jdtls = {},
   jsonls = {
     json = {
       format = { enable = true },

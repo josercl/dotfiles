@@ -23,6 +23,21 @@ require('neo-tree').setup {
       end,
     },
   },
+  filesystem = {
+    filtered_items = {
+      visible = true,
+      always_show = {
+        '.gitlab-ci.yml',
+        '.editorconfig',
+        '.gitignore',
+        '.oxfmtrc.json',
+        '.oxlintrc.json',
+      },
+      always_show_by_pattern = {
+        '.env*'
+      }
+    },
+  }
 }
 
 ---require('neo-tree').setup {

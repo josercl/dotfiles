@@ -1,6 +1,13 @@
 local gh = require('utils').gh
-vim.pack.add { gh 'j-hui/fidget.nvim' }
+vim.pack.add {
+  gh 'j-hui/fidget.nvim',
+  gh 'neovim/nvim-lspconfig',
+  gh 'mason-org/mason.nvim',
+  gh 'mason-org/mason-lspconfig.nvim',
+  gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
+}
 require('fidget').setup {}
+require('mason').setup {}
 
 ---@type table<string, vim.lsp.Config>
 local servers = {
@@ -65,15 +72,6 @@ local servers = {
     },
   },
 }
-
-vim.pack.add {
-  gh 'neovim/nvim-lspconfig',
-  gh 'mason-org/mason.nvim',
-  gh 'mason-org/mason-lspconfig.nvim',
-  gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
-}
-
-require('mason').setup {}
 
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {})

@@ -10,6 +10,6 @@ local gh = require('utils').gh
 --
 -- vim.cmd.colorscheme 'tokyonight-night'
 --
-vim.pack.add { { src = "https://github.com/catppuccin/nvim", name = "catppuccin" } }
+vim.pack.add { { src = gh "catppuccin/nvim", name = "catppuccin" } }
 
 vim.cmd.colorscheme 'catppuccin-macchiato'

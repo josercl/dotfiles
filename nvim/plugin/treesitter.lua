@@ -24,6 +24,7 @@ local parsers = {
   'python',
   'json',
   'yaml',
+  'php'
 }
 require('nvim-treesitter').install(parsers)
 

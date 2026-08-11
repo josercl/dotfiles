@@ -10,7 +10,7 @@ ln -sfn $CFG_DIR/git/gitconfig ~/.gitconfig
 ln -sfn $CFG_DIR/git/gitignore ~/.gitignore
 
 #Configuracion de MPD y ncmpcpp (MP3)
-ln -sfn $CFG_DIR/mpd ~/.mpd
+ln -sfn $CFG_DIR/mpd ~/.config/mpd
 ln -sfn $CFG_DIR/ncmpcpp ~/.ncmpcpp
 
 #Configuracion de vi con perfil de colores y plugins

@@ -9,79 +9,29 @@ vim.pack.add {
 require('fidget').setup {}
 require('mason').setup {}
 
----@type table<string, vim.lsp.Config>
+-- Per-server configs live in nvim/after/lsp/<server>.lua and override
+-- the nvim-lspconfig defaults when vim.lsp.enable() resolves them.
 local servers = {
-  rust_analyzer = {},
-  phpactor = {},
-  oxlint = {},
-  oxfmt = {},
-  djls = {},
-  djlsp = {},
-  jsonls = {
-    json = {
-      format = { enable = true },
-      validate = { enable = true },
-    },
-  },
-  pyright = {},
-  ts_ls = {
-    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-    init_options = {
-      plugins = {
-        {
-          name = '@vue/typescript-plugin',
-          location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
-          languages = { 'vue' },
-        },
-      },
-    },
-  },
-  vue_ls = {},
-  emmet_language_server = {
-    filetypes = { 'html', 'css', 'javascriptreact', 'typescriptreact', 'vue' },
-  },
-  stylua = {},
-  lua_ls = {
-    on_init = function(client)
-      client.server_capabilities.documentFormattingProvider = false
-
-      if client.workspace_folders then
-        local path = client.workspace_folders[1].name
-        if path ~= vim.fn.stdpath 'config' and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc')) then return end
-      end
-
-      client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-        runtime = {
-          version = 'LuaJIT',
-          path = { 'lua/?.lua', 'lua/?/init.lua' },
-        },
-        workspace = {
-          checkThirdParty = false,
-          library = vim.tbl_extend('force', vim.api.nvim_get_runtime_file('', true), {
-            '${3rd}/luv/library',
-            '${3rd}/busted/library',
-          }),
-        },
-      })
-    end,
-    ---@type lspconfig.settings.lua_ls
-    settings = {
-      Lua = {
-        format = { enable = false },
-      },
-    },
-  },
+  'rust_analyzer',
+  'phpactor',
+  'oxlint',
+  'oxfmt',
+  'djls',
+  'djlsp',
+  'jsonls',
+  'pyright',
+  'ts_ls',
+  'vue_ls',
+  'emmet_language_server',
+  'lua_ls',
 }
 
-local ensure_installed = vim.tbl_keys(servers or {})
-vim.list_extend(ensure_installed, {})
+local ensure_installed = vim.deepcopy(servers)
+vim.list_extend(ensure_installed, { 'stylua' })
 
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-for name, server in pairs(servers) do
-  vim.lsp.config(name, server)
-  vim.lsp.enable(name)
-end
+vim.lsp.enable(servers)
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),

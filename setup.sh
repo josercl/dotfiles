@@ -32,4 +32,4 @@ chmod +x $CFG_DIR/polybar/scripts/*
 
 ln -sfn $CFG_DIR/rofi ~/.config/rofi
 ln -sfn $CFG_DIR/kitty ~/.config/kitty
-
+ln -sfn $CFG_DIR/oh-my-posh ~/.config/oh-my-posh

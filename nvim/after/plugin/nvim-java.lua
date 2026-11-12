@@ -7,12 +7,6 @@ vim.pack.add({
   gh 'nvim-java/nvim-java'
 })
 
-require('java').setup({
-  jdk = {
-    auto_install = false
-  }
-})
-
 vim.lsp.enable('jdtls')
 vim.lsp.config('jdtls', {
   settings = {
@@ -25,17 +19,21 @@ vim.lsp.config('jdtls', {
             default = true,
           },
           {
-            name = "java 26",
-            path = "/usr/lib/jvm/java-26-openjdk",
-            default = true,
+            name = "java 25",
+            path = "/usr/lib/jvm/java-25-openjdk",
           },
           {
             name = "java 21",
             path = "/usr/lib/jvm/java-21-openjdk",
-            default = true,
           },
         }
       }
     }
+  }
+})
+
+require('java').setup({
+  jdk = {
+    auto_install = false
   }
 })

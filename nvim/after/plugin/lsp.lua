@@ -24,6 +24,7 @@ local servers = {
   'vue_ls',
   'emmet_language_server',
   'lua_ls',
+  'laravel_lsp'
 }
 
 local ensure_installed = vim.deepcopy(servers)
